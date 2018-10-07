@@ -20,7 +20,7 @@ const ThreeDots = props => {
           <a href="#">Edit Post</a>
           <a href="#">Change Date</a>
           <a href="#">Turn off notifications for this post</a>
-          <a href="#" c>Show in Tab</a>
+          <a href="#">Show in Tab</a>
           <a href="#" className="under-horizontal-bar">Hide from timeline</a>
           <a href="#">Delete</a>
           <a href="#">Turn Off Translations</a>
