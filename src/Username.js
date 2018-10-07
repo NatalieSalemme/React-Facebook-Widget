@@ -10,8 +10,11 @@ const Username = props => {
   let militaryHours = todaysDate.getHours();
   let hours = militaryHours > 12 ? militaryHours - 12 : militaryHours;
   let amOrPM = militaryHours > 12 ? 'pm' : 'am';
+  let militaryMinutes = todaysDate.getMinutes();
+  let minutes = militaryMinutes < 10 ? '0' + militaryMinutes : militaryMinutes;
   let shortDate = (todaysDate.getMonth() + 1) + '/' + todaysDate.getDate() + '/' +
-     todaysDate.getFullYear() + ' ' + hours + ':' + todaysDate.getMinutes() + amOrPM;
+     todaysDate.getFullYear() + ' ' + hours + ':' + minutes + ' ' +
+     amOrPM;
 
   return (
     <div className="username-container">
