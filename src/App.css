@@ -91,6 +91,7 @@
   margin-top: -23px;
   font-size: 6px;
   border: 1px solid blue;
+  display: inline;
 }
 .username-time:hover {
   text-decoration: underline;
@@ -104,5 +105,14 @@
   border: 1px solid purple;
 }
 .users-icon {
-  margin-left: 6px;
+  margin-left: 2px;
+}
+.users-icon-dropdown {
+  display: inline;
+  margin-left: 4px;
+  font-size: 8px;
+}
+.users-icon-dropdown:hover {
+  background-color: #e5e0e0;
+  cursor: pointer;
 }
