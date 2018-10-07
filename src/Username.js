@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers} from '@fortawesome/free-solid-svg-icons';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 
 const Username = props => {
   const usersIcon = <FontAwesomeIcon icon={faUsers} size="xs"/>
@@ -15,10 +15,15 @@ const Username = props => {
      <h6 className="username">{props.avatarName}</h6>
       <div className="time-row">
       <p className="username-time">September 15 at 11:09 AM </p>
-       <div className="users-icon-dropdown">
-       <span className="users-icon">{usersIcon}</span>
-       <span className="caret-down">{caretDown}</span>
-     </div>
+
+
+      <div className="users-icon-dropdown tooltip">
+        <span className="tooltiptext">Your friends</span>
+      <span className="users-icon">{usersIcon}</span>
+      <span className="caret-down">{caretDown}</span>
+      </div>
+
+
    </div>
    </div>
   </div>
