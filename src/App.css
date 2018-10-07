@@ -116,3 +116,6 @@
   background-color: #e5e0e0;
   cursor: pointer;
 }
+.time-row {
+  margin-top: -2em;
+}
