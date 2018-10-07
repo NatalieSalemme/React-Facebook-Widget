@@ -8,7 +8,6 @@
 }
 .dropbtn {
   color: black;
-  padding: 16px;
   font-size: 16px;
   border: none;
   color: #6a6d72;
@@ -16,8 +15,7 @@
 }
 .dropdown {
   position: relative;
-  display: inline-block;
-  float: right;
+  display: inline;
 }
 .dropdown-content {
   display: none;
@@ -48,8 +46,16 @@
   cursor: pointer;
   color: black;
 }
+.dots-container {
+  border: 1px solid blue;
+  margin-right: 4px;
+}
 .username {
-  float: left;
+  color: #3B5998;
+}
+.username-container {
+  border: 1px solid green;
+  width: 1fr;
 }
 .under-horizontal-bar:after {
   content: "";
@@ -63,4 +69,17 @@
 }
 .bookmark {
   padding-right: 4px;
+}
+.avatar-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.username-time {
+  font-size: 6px;
 }

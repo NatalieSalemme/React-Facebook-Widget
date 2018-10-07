@@ -12,10 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Username />
+        <div className="row">
+        <Username
+          avatarName={'Natalie Salemme'}/>
         <ThreeDots />
-            <FontAwesomeIcon icon="far fa-bookmark" />
       </div>
+    </div>
     );
   }
 }

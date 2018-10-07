@@ -9,7 +9,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 const ThreeDots = props => {
   const bookmark = <FontAwesomeIcon icon={faBookmark} />;
   return (
-    <div>
+    <div className="dots-container">
       <div className="dropdown">
         <button href="#" className="dropbtn">...</button>
         <div className="dropdown-content">
