@@ -1,11 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-
+import { UserDropDown } from './UserDropDown';
 
 const Username = props => {
-  const usersIcon = <FontAwesomeIcon icon={faUsers} size="xs"/>
-  const caretDown = <FontAwesomeIcon icon={faCaretDown} size="xs"/>
+
   let todaysDate = new Date;
   let militaryHours = todaysDate.getHours();
   let hours = militaryHours > 12 ? militaryHours - 12 : militaryHours;
@@ -28,13 +27,7 @@ const Username = props => {
       <p className="username-time">September 15 at 11:09 AM </p>
       <span className="time-tooltiptext">{shortDate.toString()}</span>
     </div>
-      <div className="users-icon-dropdown tooltip">
-        <span className="tooltiptext">Your friends</span>
-      <span className="users-icon">{usersIcon}</span>
-      <span className="caret-down">{caretDown}</span>
-      </div>
-
-
+      <UserDropDown />
    </div>
    </div>
   </div>

@@ -112,7 +112,7 @@
   margin-left: 4px;
   font-size: 8px;
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 .users-icon-dropdown:hover {
   background-color: #e5e0e0;
@@ -120,11 +120,12 @@
 }
 .time-row {
   margin-top: -2em;
+  display: flex;
 }
 .tooltip,
 .time-tooltip {
     position: relative;
-    display: inline-block;
+    display: inline;
 }
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -178,3 +179,8 @@
 .time-tooltip:hover .time-tooltiptext {
     visibility: visible;
 }
+/* .menu {
+  z-index: -1;
+  position: absolute;
+  opacity: 1;
+} */
