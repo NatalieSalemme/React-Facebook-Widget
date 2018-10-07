@@ -121,7 +121,8 @@
 .time-row {
   margin-top: -2em;
 }
-.tooltip {
+.tooltip,
+.time-tooltip {
     position: relative;
     display: inline-block;
 }
@@ -152,5 +153,28 @@
 }
 
 .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.time-tooltip .time-tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    background-color: #c3c6cc;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+    color: black;
+    font-size: 6px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.time-tooltip:hover .time-tooltiptext {
     visibility: visible;
 }

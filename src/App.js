@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ThreeDots from './ThreeDots';
 import Username from './Username';
-
+import StatusText from './StatusText';
 
 
 import './App.css';
@@ -15,6 +15,7 @@ class App extends Component {
           avatarName={'Natalie Salemme'}/>
         <ThreeDots />
       </div>
+      <StatusText status={'this is my temporary status'}/>
     </div>
     );
   }
