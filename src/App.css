@@ -68,6 +68,10 @@
   border: 1px solid red;
   margin-top: -.1px;
 }
+.username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .username-container {
   border: 1px solid green;
   display: flex;
@@ -88,10 +92,17 @@
   font-size: 6px;
   border: 1px solid blue;
 }
+.username-time:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .username-column {
   border: 1px solid orange;
   padding-left: 2px;
 }
 .avatar-container {
   border: 1px solid purple;
+}
+.users-icon {
+  margin-left: 6px;
 }
