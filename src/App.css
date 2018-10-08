@@ -155,6 +155,9 @@
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
+.likes-icon-tooltip .likes-icon-tooltiptext::after {
+  margin-left: -15px;
+}
 .likes-hover {
   margin-left: -5px;
 }
@@ -231,7 +234,10 @@
 }
 .likes-icon {
   border: 1px solid green;
+  cursor: pointer;
 }
 .heart-icon {
   border: 1px solid orange;
+  cursor: pointer;
+  margin-left: 1px;
 }

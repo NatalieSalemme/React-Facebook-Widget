@@ -18,12 +18,16 @@ export const LikesBar = props => {
     <div className="likes-icons">
       <div className="tooltip likes-icon-tooltip">
         <span className="likes-icon">{ thumbsUpIcon }</span>
-        <span className="tooltiptext likes-icon-tooltiptext"
-          style={{marginLeft: '-35px'}}>
+        <span className="tooltiptext likes-icon-tooltiptext">
           <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">{likesHover}</ul>
         </span>
     </div>
+    <div className="tooltip likes-icon-tooltip">
       <span className="heart-icon">{ heartIcon }</span>
+      <span className="tooltiptext likes-icon-tooltiptext">
+        <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">{likesHover}</ul>
+      </span>
+  </div>
     </div>
     <div className="tooltip">
       <p className="likes-list">{firstLikes} and {likesList.length - 2} others</p>
