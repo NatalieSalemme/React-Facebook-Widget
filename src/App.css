@@ -179,8 +179,24 @@
 .time-tooltip:hover .time-tooltiptext {
     visibility: visible;
 }
-/* .menu {
-  z-index: -1;
-  position: absolute;
-  opacity: 1;
-} */
+.status-container {
+  border: 1px solid red;
+  width: 95%;
+  margin: auto;
+  margin-top: .5em;
+}
+.status-text {
+  font-size: 8px;
+}
+.status-photo {
+  height: 200px;
+  width: 320px;
+  margin-top: .5em;
+}
+.likes-bar {
+  font-size: 7px;
+  color: gray;
+  border: 1px solid red;
+  width: 95%;
+  margin: auto;
+}
