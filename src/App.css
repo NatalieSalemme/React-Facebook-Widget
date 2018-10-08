@@ -1,4 +1,7 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   border: 1px solid black;
   width: 20em;
@@ -192,7 +195,7 @@
   height: 200px;
   width: 320px;
   margin-top: .5em;
-  
+
 }
 .likes-bar {
   font-size: 7px;
@@ -208,4 +211,13 @@
 .status-comments:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+ .likes-name-item {
+  margin: auto;
+  list-style-type: none;
+}
+
+.likes-name-container {
+  text-align: left;
+  padding: 3px 6px;
 }
