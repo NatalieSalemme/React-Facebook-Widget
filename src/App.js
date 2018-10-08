@@ -10,7 +10,7 @@ class App extends Component {
 constructor(props) {
   super(props);
   this.state = {
-    commentNumber: 1
+    commentNumber: 2
   }
 }
   render() {
