@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { UserDropDown } from './UserDropDown';
 
 const Username = props => {

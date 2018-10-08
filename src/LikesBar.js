@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const LikesBar = props => {
   const likesList = ['Aria Montgomery', 'Spencer Hastings', 'Emily Fields',
@@ -9,8 +11,20 @@ export const LikesBar = props => {
       {name}
     </li>
   );
+  const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="xs"/>
+  const heartIcon = <FontAwesomeIcon icon={faHeart} size="xs"/>
   return (
   <div className="likes-bar">
+    <div className="likes-icons">
+      <div className="tooltip likes-icon-tooltip">
+        <span className="likes-icon">{ thumbsUpIcon }</span>
+        <span className="tooltiptext likes-icon-tooltiptext"
+          style={{marginLeft: '-35px'}}>
+          <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">{likesHover}</ul>
+        </span>
+    </div>
+      <span className="heart-icon">{ heartIcon }</span>
+    </div>
     <div className="tooltip">
       <p className="likes-list">{firstLikes} and {likesList.length - 2} others</p>
       <span className="tooltiptext" style={{width: 'auto', height: 'auto'}}>
