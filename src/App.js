@@ -4,6 +4,7 @@ import Username from './Username';
 import StatusText from './StatusText';
 import StatusPhoto from './components/StatusPhoto';
 import LikesBar from './LikesBar';
+import LikeCommentShare from './LikeCommentShare';
 import './App.css';
 
 class App extends Component {
@@ -25,6 +26,7 @@ constructor(props) {
       <StatusPhoto />
       <LikesBar
         commentNumber={this.state.commentNumber}/>
+      <LikeCommentShare />
     </div>
     );
   }

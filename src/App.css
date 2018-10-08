@@ -138,7 +138,6 @@
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    left: 50%;
     margin-left: -25px;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext {
@@ -156,7 +155,7 @@
     border-color: black transparent transparent transparent;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext::after {
-  margin-left: -15px;
+  margin-left: -20px;
 }
 .likes-hover {
   margin-left: -5px;
@@ -235,12 +234,38 @@
 .likes-icon {
   border: 1px solid green;
   cursor: pointer;
+  color: #3B5998;
 }
 .heart-icon {
   border: 1px solid orange;
   cursor: pointer;
   margin-left: 1px;
+  color: #ed3b68;
 }
 .likes-header {
   font-weight: bold;
+}
+.like-comment-share-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: .1px solid #e0e2e5;
+  border-bottom: .1px solid #e0e2e5;
+  margin-top: 2px;
+  font-size: 8px;
+  font-weight: bold;
+  color: #9795a0;
+}
+.likes-icon-container,
+.comments-icon-container,
+.share-icon-container {
+  cursor: pointer;
+  border: 1px solid green;
+  width: 100%;
+  text-align: center;
+}
+.likes-icon-container:hover,
+.comments-icon-container:hover,
+.share-icon-container:hover {
+  background-color: #d5d4d8;
 }
