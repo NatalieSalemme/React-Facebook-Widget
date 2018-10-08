@@ -4,7 +4,7 @@
   width: 20em;
   margin: auto;
   margin-top: 5em;
-  height: 20em;
+  height: 30em;
 }
 .dropbtn {
   color: black;
@@ -192,6 +192,7 @@
   height: 200px;
   width: 320px;
   margin-top: .5em;
+  
 }
 .likes-bar {
   font-size: 7px;
@@ -199,4 +200,12 @@
   border: 1px solid red;
   width: 95%;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.likes-list:hover,
+.status-comments:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
