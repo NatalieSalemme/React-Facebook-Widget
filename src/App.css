@@ -241,3 +241,6 @@
   cursor: pointer;
   margin-left: 1px;
 }
+.likes-header {
+  font-weight: bold;
+}

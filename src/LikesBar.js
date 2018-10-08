@@ -19,13 +19,19 @@ export const LikesBar = props => {
       <div className="tooltip likes-icon-tooltip">
         <span className="likes-icon">{ thumbsUpIcon }</span>
         <span className="tooltiptext likes-icon-tooltiptext">
-          <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">{likesHover}</ul>
+          <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">
+            <span className="likes-header">Like</span>
+            {likesHover}
+          </ul>
         </span>
     </div>
     <div className="tooltip likes-icon-tooltip">
       <span className="heart-icon">{ heartIcon }</span>
       <span className="tooltiptext likes-icon-tooltiptext">
-        <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">{likesHover}</ul>
+        <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">
+          <span className="likes-header">Love</span>
+          {likesHover}
+        </ul>
       </span>
   </div>
     </div>
