@@ -171,7 +171,7 @@
 .time-tooltip .time-tooltiptext {
     visibility: hidden;
     width: 60px;
-    background-color: #c3c6cc;
+    background-color: #f2f4f7;;
     color: #fff;
     text-align: center;
     border-radius: 2px;
@@ -251,26 +251,29 @@
 .like-comment-share-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   border-top: .1px solid #e0e2e5;
   border-bottom: .1px solid #e0e2e5;
-  margin-top: 2px;
+  margin-top: -3px;
   font-size: 8px;
   font-weight: bold;
   color: #9795a0;
+  /* border: 1px solid blue; */
 }
-.likes-icon-container,
-.comments-icon-container,
-.share-icon-container {
+p.likes-icon-container,
+p.comments-icon-container,
+p.share-icon-container {
   cursor: pointer;
-  /* border: 1px solid green; */
   width: 100%;
   text-align: center;
+  /* border: 1px solid green; */
+  padding: 4px 0;
 }
 .likes-icon-container:hover,
 .comments-icon-container:hover,
 .share-icon-container:hover {
-  background-color: #d5d4d8;
+  background-color: #f2f4f7;
+  border-radius: 3px;
+  /* border: 1px solid red; */
 }
 .comment-section {
   height: auto;
@@ -308,17 +311,24 @@
   position: absolute;
   margin-left: 210px;
 }
-.smile-icon {
+.comment-emojis {
+  color: lightgray;
+}
+.smile-icon:hover {
   color: orange;
+  cursor: pointer;
 }
-.camera-icon {
+.camera-icon:hover {
   color: gray;
+  cursor: pointer;
 }
-.globe-icon {
+.globe-icon:hover {
   color: blue;
+  cursor: pointer;
 }
-.sticker-icon {
+.sticker-icon:hover {
   color: #846b4b;
+  cursor: pointer;
 }
 .ellipsis-icon {
   cursor: pointer;
@@ -362,13 +372,14 @@
 }
 .like-reply-container {
   /* border: 1px solid orange; */
-  width: 60px;
+  width: 45px;
   height: 20px;
   display: flex;
   justify-content: space-around;
   margin-left: 40px;
   margin-top: -5px;
   margin-bottom: 8px;
+
 }
 .like-reply {
   font-size: 7px;
@@ -382,4 +393,14 @@
 }
 .comment-submit {
   display: none;
+}
+.small-popup {
+  font-size: 8px;
+  width: auto;
+  display: block;
+}
+.circle-icon {
+  font-size: 3px;
+  color: #dee1e5;
+  margin-top: 10px;
 }

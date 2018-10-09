@@ -23,10 +23,22 @@ export const CommentBar = props => {
         <button className="comment-submit" type="submit" name="submit" value="submit" >Submit</button>
       </form>
       <div className="comment-emojis">
+        <div className="tooltip">
         <span className="smile-icon">{smileIcon}</span>
+        <span className="tooltiptext small-popup">Insert an emoji</span>
+      </div>
+      <div className="tooltip">
         <span className="camera-icon">{cameraIcon}</span>
+        <span className="tooltiptext small-popup">Attach a photo or video</span>
+      </div>
+      <div className="tooltip">
         <span className="globe-icon">{globeIcon}</span>
+        <span className="tooltiptext small-popup">Post a gif</span>
+      </div>
+      <div className="tooltip">
         <span className="sticker-icon">{stickerIcon}</span>
+        <span className="tooltiptext small-popup">Post a sticker</span>
+      </div>
       </div>
     </div>
   );

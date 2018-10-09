@@ -2,10 +2,15 @@ What I still need to do:
   -for the input, when the user types more than a certain amount, have the words start on a new line to avoid it being hidden by the emoji's.
   -on the like and reply, the hover text should be emojis
   -If I like the status, the number of likes should increase and my name should appear in the likes hover.
-  -Comments should change depending on how many comments there are
   -Distinction between likes and hearts hover.
   -If I click "comment", it should focus on input
   -If I click share, a dropdown menu should appear
   -If I hover over a user's avatar photo, their cover photo and information should be displayed
   -When clicking the friends icon, a dropdown menu should appear with a "more" section
   -Three dots at the top right should show a dropdown when clicked and not hovered over
+-Add hover messages to the emojis in the input
+-Under the comments hover show the names of people who commented
+-on comments click, hide the comments and input
+-add a timer that counts how many minutes/hours/days/weeks you made the comment or post
+-if you hit reply, your comment gets posted under theirs
+-when hovering over emoji's, show popup and make the emoji darker

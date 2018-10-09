@@ -12,10 +12,12 @@ class App extends Component {
 constructor(props) {
   super(props);
   this.state = {
-    commentNumber: 2,
+    commentNumber: 3,
     pendingComment: "",
     userName: "Natalie Salemme",
-    avatar: '',
+    avatar: <img
+      className="avatar-img"
+      src={require('./avatar.jpg')}/>,
     commentors: [
       {
       name: 'Pam Beesly',
@@ -43,6 +45,7 @@ constructor(props) {
 }
 removeCommentAt = index => {
   this.setState({
+    commentNumber: this.state.commentNumber - 1,
     commentors: [
         ...this.state.commentors.slice(0, index),
         ...this.state.commentors.slice(index + 1)
@@ -57,6 +60,7 @@ handleNameInput = e =>
 newCommentorSubmitHandler = e => {
   e.preventDefault();
   this.setState({
+    commentNumber: this.state.commentNumber + 1,
     commentors: [
           ...this.state.commentors,
       {
@@ -68,13 +72,10 @@ newCommentorSubmitHandler = e => {
     pendingComment: ''
   });
 }
-componentDidMount() {
-  this.setState({
-    avatar: <img
-      className="avatar-img"
-      src="http://i67.tinypic.com/f1fx1u.jpg"/>
-  });
-}
+// focusOnInput = () => {
+//   console.log('focus on me');
+//
+// }
   render() {
     return (
       <div className="App">
@@ -87,7 +88,7 @@ componentDidMount() {
       <StatusPhoto />
       <LikesBar
         commentNumber={this.state.commentNumber}/>
-      <LikeCommentShare />
+      <LikeCommentShare focusOnInput={this.focusOnInput}/>
       <CommentSection
         commentors={this.state.commentors}
         handleNameInput={this.handleNameInput}
