@@ -20,17 +20,23 @@ constructor(props) {
       {
       name: 'Pam Beesly',
       comment: 'I love my pens',
-      photo: "Pam photo"
+      photo: <img
+        className="avatar-img"
+        src={require('./pam.jpg')}/>
     },
     {
       name: 'Jim Halpert',
       comment: 'Blue shirts are my favorite',
-      photo: "Jim photo"
+      photo: <img
+        className="avatar-img"
+        src={require('./jim.png')} />
     },
       {
         name: 'Angela Kinsey',
         comment: 'I hope my cat is ok',
-        photo: "Angela photo"
+        photo: <img
+          className="avatar-img"
+          src={require('./angela.jpg')}/>
       }
     ]
   }
@@ -64,7 +70,9 @@ newCommentorSubmitHandler = e => {
 }
 componentDidMount() {
   this.setState({
-    avatar: <img src="http://i67.tinypic.com/f1fx1u.jpg" width="30px" height= "30px" />
+    avatar: <img
+      className="avatar-img"
+      src="http://i67.tinypic.com/f1fx1u.jpg"/>
   });
 }
   render() {

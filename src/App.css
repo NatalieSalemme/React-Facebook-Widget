@@ -338,3 +338,7 @@
 .like-reply:hover {
   text-decoration: underline;
 }
+.comment-list {
+  list-style-type: none;
+  margin-left: -35px;
+}
