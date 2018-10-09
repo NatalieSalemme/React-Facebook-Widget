@@ -7,13 +7,19 @@ const Comment = props => {
   const ellipsisIcon = <FontAwesomeIcon icon={faEllipsisH} size="xs"/>
   return (
     <li key={props.key} className="comment-list">
+      <div className="comment">
       <span>{props.photo} </span>
-      <span>{props.name}</span>
-      <span> {props.comment}</span>
-      <span
-        onClick={props.handleRemove}
-        className="ellipsis-icon">
-        {ellipsisIcon}</span>
+      <div className="commentor-and-comment">
+      <span className="commentor-name">
+        {props.name}
+      </span>
+      <span className="comment-text"> {props.comment}</span>
+    </div>
+    <span
+      onClick={props.handleRemove}
+      className="ellipsis-icon">
+      {ellipsisIcon}</span>
+    </div>
       <p className="like-reply">Like</p>
       <p className="like-reply">Reply</p>
     </li>

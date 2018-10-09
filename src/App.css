@@ -341,4 +341,28 @@
 .comment-list {
   list-style-type: none;
   margin-left: -35px;
+  border: 1px solid red;
+}
+.comment {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+}
+.commentor-name {
+  color: #3B5998;
+  font-size: 9px;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.commentor-and-comment {
+  border: 1px solid green;
+  background-color: #f2f4f7;
+  border-radius: 8px;
+  width: auto;
+}
+.comment-text {
+  font-size: 8px;
 }
