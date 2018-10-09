@@ -14,18 +14,19 @@ constructor(props) {
   this.state = {
     commentNumber: 2,
     pendingComment: "",
+    userName: "Natalie Salemme",
     commentors: [
       {
-      name: 'Natalie',
-      comment: 'comment from nat'
+      name: 'Pam Beesly',
+      comment: 'I love my pens'
     },
     {
       name: 'Jim Halpert',
-      comment: 'hello from mari'
+      comment: 'Blue shirts are my favorite'
     },
       {
         name: 'Angela Kinsey',
-        comment: 'I love netflix'
+        comment: 'I hope my cat is ok'
       }
     ]
   }
@@ -49,8 +50,8 @@ newCommentorSubmitHandler = e => {
     commentors: [
           ...this.state.commentors,
       {
-        name: this.state.pendingComment,
-        comment: this.state.comment
+        name: this.state.userName,
+        comment: this.state.pendingComment,
       }
     ],
     pendingComment: ''

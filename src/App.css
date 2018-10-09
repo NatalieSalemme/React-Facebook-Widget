@@ -4,7 +4,7 @@
   width: 20em;
   margin: auto;
   margin-top: 5em;
-  height: 35em;
+  height: auto;
 }
 .dropbtn {
   color: black;
@@ -323,6 +323,7 @@
 .ellipsis-icon {
   cursor: pointer;
   opacity: 0;
+  margin-left: 4px;
 }
 .ellipsis-icon:hover {
   opacity: 1;
