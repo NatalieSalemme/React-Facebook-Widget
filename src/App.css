@@ -269,3 +269,29 @@
 .share-icon-container:hover {
   background-color: #d5d4d8;
 }
+.comment-section {
+  border: 1px solid blue;
+  height: auto;
+}
+.comment-input {
+  border-radius: 6px;
+  width: 80%;
+  height: 17px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d5d4d8;
+  font-size: 8px;
+  background-color: #f2f4f7;
+  text-indent: 5px;
+  margin-left: 3px;
+
+}
+.comment-input:focus {
+  outline: none;
+}
+.comment-bar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -5,6 +5,9 @@ import StatusText from './StatusText';
 import StatusPhoto from './components/StatusPhoto';
 import LikesBar from './LikesBar';
 import LikeCommentShare from './LikeCommentShare';
+import CommentSection from './CommentSection';
+import CommentBar from './CommentBar';
+
 import './App.css';
 
 class App extends Component {
@@ -27,6 +30,8 @@ constructor(props) {
       <LikesBar
         commentNumber={this.state.commentNumber}/>
       <LikeCommentShare />
+      <CommentSection />
+      <CommentBar />
     </div>
     );
   }

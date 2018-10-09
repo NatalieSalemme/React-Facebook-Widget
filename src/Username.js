@@ -16,7 +16,11 @@ const Username = props => {
   return (
     <div className="username-container">
       <div className="avatar-container">
-      <img src={require('./avatar.jpg')} className="avatar-img" alt="avatar"/>
+      <img
+        src={require('./avatar.jpg')}
+        className="avatar-img"
+        alt="avatar"
+        style={{paddingTop: 20}}/>
     </div>
     <div className="username-column">
      <h6 className="username">{props.avatarName}</h6>
