@@ -322,4 +322,18 @@
 }
 .ellipsis-icon {
   cursor: pointer;
+  opacity: 0;
+}
+.ellipsis-icon:hover {
+  opacity: 1;
+  color: lightgray;
+}
+
+.like-reply {
+  font-size: 8px;
+  color: blue;
+  cursor: pointer;
+}
+.like-reply:hover {
+  text-decoration: underline;
 }

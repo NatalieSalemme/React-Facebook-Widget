@@ -14,8 +14,8 @@ const Comment = props => {
         onClick={props.handleRemove}
         className="ellipsis-icon">
         {ellipsisIcon}</span>
-      <button>Like</button>
-      <button>Reply</button>
+      <p className="like-reply">Like</p>
+      <p className="like-reply">Reply</p>
     </li>
   );
 }
