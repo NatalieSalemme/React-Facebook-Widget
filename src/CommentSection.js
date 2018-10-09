@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import Commentor from './Commentor';
 
-export const CommentSection = () => {
+export const CommentSection = props => {
   return (
     <div className="comment-section">
-      <p>Comments go here</p>
+      <Commentor
+          comments={'coming from comment section'}/>
     </div>
   );
 }

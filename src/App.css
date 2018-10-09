@@ -47,8 +47,9 @@
   color: black;
 }
 .dots-container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin-right: 4px;
+  height: 40px;
 }
 
 .under-horizontal-bar:after {
@@ -65,7 +66,7 @@
 }
 .username {
   color: #3B5998;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: -.1px;
 }
 .username:hover {
@@ -73,9 +74,10 @@
   cursor: pointer;
 }
 .username-container {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
+  height: 40px;
 }
 .avatar-img {
   height: 30px;
@@ -86,11 +88,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 60px;
 }
 .username-time {
   /* margin-top: -23px; */
   font-size: 6px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: inline;
 }
 .username-time:hover {
@@ -98,11 +101,11 @@
   cursor: pointer;
 }
 .username-column {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   padding-left: 2px;
 }
 .avatar-container {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 }
 .users-icon {
   margin-left: 2px;
@@ -187,10 +190,10 @@
     visibility: visible;
 }
 .status-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 95%;
   margin: auto;
-  margin-top: .5em;
+  margin-top: -30px;
 }
 .status-text {
   font-size: 8px;
@@ -204,7 +207,7 @@
 .likes-bar {
   font-size: 7px;
   color: gray;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 95%;
   margin: auto;
   display: flex;
@@ -225,19 +228,19 @@
   padding: 3px 6px;
 }
 .likes-icons {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 14px;
 }
 .likes-icon {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   cursor: pointer;
   color: #3B5998;
 }
 .heart-icon {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   cursor: pointer;
   margin-left: 1px;
   color: #ed3b68;
@@ -260,7 +263,7 @@
 .comments-icon-container,
 .share-icon-container {
   cursor: pointer;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 100%;
   text-align: center;
 }
@@ -270,7 +273,7 @@
   background-color: #d5d4d8;
 }
 .comment-section {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: auto;
 }
 .comment-input {
@@ -304,5 +307,16 @@
   z-index: 2;
   position: absolute;
   margin-left: 240px;
-
+}
+.smile-icon {
+  color: orange;
+}
+.camera-icon {
+  color: gray;
+}
+.globe-icon {
+  color: blue;
+}
+.sticker-icon {
+  color: #846b4b;
 }

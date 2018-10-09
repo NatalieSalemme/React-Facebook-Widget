@@ -14,10 +14,10 @@ export const CommentBar = () => {
       <img src={require('./avatar.jpg')} className="avatar-img" alt="avatar"/>
       <input className="comment-input" type="text" placeholder="Write a comment..."/>
       <div className="comment-emojis">
-        <span>{smileIcon}</span>
-        <span>{cameraIcon}</span>
-        <span>{stickerIcon}</span>
-        <span>{globeIcon}</span>
+        <span className="smile-icon">{smileIcon}</span>
+        <span className="camera-icon">{cameraIcon}</span>
+        <span className="globe-icon">{globeIcon}</span>
+        <span className="sticker-icon">{stickerIcon}</span>
       </div>
     </div>
   );

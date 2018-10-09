@@ -19,8 +19,7 @@ const Username = props => {
       <img
         src={require('./avatar.jpg')}
         className="avatar-img"
-        alt="avatar"
-        style={{paddingTop: 20}}/>
+        alt="avatar"/>
     </div>
     <div className="username-column">
      <h6 className="username">{props.avatarName}</h6>

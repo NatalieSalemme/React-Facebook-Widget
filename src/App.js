@@ -7,14 +7,28 @@ import LikesBar from './LikesBar';
 import LikeCommentShare from './LikeCommentShare';
 import CommentSection from './CommentSection';
 import CommentBar from './CommentBar';
-
+import Commentor from './Commentor';
 import './App.css';
 
 class App extends Component {
 constructor(props) {
   super(props);
   this.state = {
-    commentNumber: 2
+    commentNumber: 2,
+    commentors: [
+      {
+      name: 'Natalie',
+      comment: 'comment from nat'
+    },
+    {
+      name: 'Marisol',
+      comment: 'hello from mari'
+    },
+      {
+        name: 'Hope',
+        comment: 'I love netflix'
+      }
+    ]
   }
 }
   render() {
@@ -30,8 +44,9 @@ constructor(props) {
       <LikesBar
         commentNumber={this.state.commentNumber}/>
       <LikeCommentShare />
-      <CommentSection />
-      <CommentBar />
+      {/* <CommentSection /> */}
+      {/* <CommentBar /> */}
+      <Commentor commentors={this.state.commentors}/>
     </div>
     );
   }
