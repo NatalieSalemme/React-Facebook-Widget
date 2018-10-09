@@ -7,7 +7,7 @@ const Comment = props => {
   const ellipsisIcon = <FontAwesomeIcon icon={faEllipsisH} size="xs"/>
   return (
     <li key={props.key}>
-      <span>photo here </span>
+      <span>{props.photo} </span>
       <span>{props.name}</span>
       <span> {props.comment}</span>
       <span

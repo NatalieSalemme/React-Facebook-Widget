@@ -15,18 +15,22 @@ constructor(props) {
     commentNumber: 2,
     pendingComment: "",
     userName: "Natalie Salemme",
+    avatar: '',
     commentors: [
       {
       name: 'Pam Beesly',
-      comment: 'I love my pens'
+      comment: 'I love my pens',
+      photo: "Pam photo"
     },
     {
       name: 'Jim Halpert',
-      comment: 'Blue shirts are my favorite'
+      comment: 'Blue shirts are my favorite',
+      photo: "Jim photo"
     },
       {
         name: 'Angela Kinsey',
-        comment: 'I hope my cat is ok'
+        comment: 'I hope my cat is ok',
+        photo: "Angela photo"
       }
     ]
   }
@@ -50,13 +54,18 @@ newCommentorSubmitHandler = e => {
     commentors: [
           ...this.state.commentors,
       {
+        photo: this.state.avatar,
         name: this.state.userName,
         comment: this.state.pendingComment,
       }
     ],
     pendingComment: ''
   });
-
+}
+componentDidMount() {
+  this.setState({
+    avatar: <img src="http://i67.tinypic.com/f1fx1u.jpg" width="30px" height= "30px" />
+  });
 }
   render() {
     return (

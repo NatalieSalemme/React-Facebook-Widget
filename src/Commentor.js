@@ -13,6 +13,7 @@ const Commentor = props => {
             key={index}
             name={commentor.name}
             comment={commentor.comment}
+            photo={commentor.photo}
             handleRemove={() => props.removeCommentAt(index)}
             />
         )}
