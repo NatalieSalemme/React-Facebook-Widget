@@ -12,7 +12,6 @@ const Commentor = props => {
             <span> {commentor.comment}</span>
             <button>Like</button>
             <button>Reply</button>
-
           </li>
         )}
       </ul>

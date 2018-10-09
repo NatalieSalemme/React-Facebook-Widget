@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
 import Commentor from './Commentor';
+import CommentBar from './CommentBar';
 
 export const CommentSection = props => {
   return (
     <div className="comment-section">
       <Commentor
-          comments={'coming from comment section'}/>
+          commentors={props.commentors}/>
+      <CommentBar
+        handleNameInput={props.handleNameInput}
+        value={props.value}
+        newCommentorSubmitHandler={props.newCommentorSubmitHandler}/>
     </div>
   );
 }

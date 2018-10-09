@@ -6,8 +6,6 @@ import StatusPhoto from './components/StatusPhoto';
 import LikesBar from './LikesBar';
 import LikeCommentShare from './LikeCommentShare';
 import CommentSection from './CommentSection';
-import CommentBar from './CommentBar';
-import Commentor from './Commentor';
 import './App.css';
 
 class App extends Component {
@@ -15,21 +13,40 @@ constructor(props) {
   super(props);
   this.state = {
     commentNumber: 2,
+    pendingComment: "",
     commentors: [
       {
       name: 'Natalie',
       comment: 'comment from nat'
     },
     {
-      name: 'Marisol',
+      name: 'Jim Halpert',
       comment: 'hello from mari'
     },
       {
-        name: 'Hope',
+        name: 'Angela Kindsey',
         comment: 'I love netflix'
       }
     ]
   }
+}
+handleNameInput = e =>
+  this.setState({
+    pendingComment: e.target.value
+  });
+newCommentorSubmitHandler = e => {
+  e.preventDefault();
+  this.setState({
+    commentors: [
+          ...this.state.commentors,
+      {
+        name: this.state.pendingComment,
+        comment: this.state.comment
+      }
+    ],
+    pendingComment: ''
+  });
+
 }
   render() {
     return (
@@ -44,9 +61,11 @@ constructor(props) {
       <LikesBar
         commentNumber={this.state.commentNumber}/>
       <LikeCommentShare />
-      {/* <CommentSection /> */}
-      {/* <CommentBar /> */}
-      <Commentor commentors={this.state.commentors}/>
+      <CommentSection
+        commentors={this.state.commentors}
+      handleNameInput={this.handleNameInput}
+      value={this.state.pendingComment}
+      newCommentorSubmitHandler={this.newCommentorSubmitHandler}/>
     </div>
     );
   }

@@ -6,6 +6,7 @@ export const StatusPhoto = () => {
     <img
       className="status-photo"
       src={require('./dessert-cups.jpg')}
+      alt="Avatar"
     />
   </div>
   )

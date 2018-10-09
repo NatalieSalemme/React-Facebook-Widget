@@ -3,7 +3,7 @@ import { UserDropDown } from './UserDropDown';
 
 const Username = props => {
 
-  let todaysDate = new Date;
+  let todaysDate = new Date();
   let militaryHours = todaysDate.getHours();
   let hours = militaryHours > 12 ? militaryHours - 12 : militaryHours;
   let amOrPM = militaryHours > 12 ? 'pm' : 'am';
