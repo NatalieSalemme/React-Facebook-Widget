@@ -3,7 +3,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faCamera, faStickyNote, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-export const CommentBar = () => {
+export const CommentBar = props => {
   const smileIcon = <FontAwesomeIcon icon={faSmile} size="xs"/>
   const cameraIcon = <FontAwesomeIcon icon={faCamera} size="xs"/>
   const globeIcon = <FontAwesomeIcon icon={faGlobe} size="xs"/>
@@ -11,8 +11,17 @@ export const CommentBar = () => {
 
   return (
     <div className="comment-bar-container">
+
       <img src={require('./avatar.jpg')} className="avatar-img" alt="avatar"/>
-      <input className="comment-input" type="text" placeholder="Write a comment..."/>
+      <form onSubmit={props.newCommentorSubmitHandler}>
+      <input
+        className="comment-input"
+        type="text"
+        placeholder="Write a comment..."
+        onChange={props.handleNameInput}
+        value={props.value}/>
+        <button type="submit" name="submit" value="submit" >Submit</button>
+      </form>
       <div className="comment-emojis">
         <span className="smile-icon">{smileIcon}</span>
         <span className="camera-icon">{cameraIcon}</span>

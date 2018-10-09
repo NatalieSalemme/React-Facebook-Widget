@@ -320,3 +320,6 @@
 .sticker-icon {
   color: #846b4b;
 }
+.ellipsis-icon {
+  cursor: pointer;
+}

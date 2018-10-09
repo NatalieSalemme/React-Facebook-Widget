@@ -24,12 +24,21 @@ constructor(props) {
       comment: 'hello from mari'
     },
       {
-        name: 'Angela Kindsey',
+        name: 'Angela Kinsey',
         comment: 'I love netflix'
       }
     ]
   }
 }
+removeCommentAt = index => {
+  this.setState({
+    commentors: [
+        ...this.state.commentors.slice(0, index),
+        ...this.state.commentors.slice(index + 1)
+    ]
+  });
+}
+
 handleNameInput = e =>
   this.setState({
     pendingComment: e.target.value
@@ -63,9 +72,10 @@ newCommentorSubmitHandler = e => {
       <LikeCommentShare />
       <CommentSection
         commentors={this.state.commentors}
-      handleNameInput={this.handleNameInput}
-      value={this.state.pendingComment}
-      newCommentorSubmitHandler={this.newCommentorSubmitHandler}/>
+        handleNameInput={this.handleNameInput}
+        value={this.state.pendingComment}
+        newCommentorSubmitHandler={this.newCommentorSubmitHandler}
+        removeCommentAt={this.removeCommentAt}/>
     </div>
     );
   }

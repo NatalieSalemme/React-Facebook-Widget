@@ -7,11 +7,13 @@ export const CommentSection = props => {
   return (
     <div className="comment-section">
       <Commentor
-          commentors={props.commentors}/>
+        commentors={props.commentors}
+        removeCommentAt={props.removeCommentAt}/>
       <CommentBar
         handleNameInput={props.handleNameInput}
         value={props.value}
-        newCommentorSubmitHandler={props.newCommentorSubmitHandler}/>
+        newCommentorSubmitHandler={props.newCommentorSubmitHandler}
+        />
     </div>
   );
 }

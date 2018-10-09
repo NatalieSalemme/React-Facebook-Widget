@@ -1,18 +1,20 @@
 import React from 'react';
 import './App.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import Comment from './Comment';
 
 const Commentor = props => {
   return (
     <div>
       <ul>
         {props.commentors.map((commentor, index) =>
-          <li key={index}>
-            <span>photo here </span>
-            <span>{commentor.name}</span>
-            <span> {commentor.comment}</span>
-            <button>Like</button>
-            <button>Reply</button>
-          </li>
+          <Comment
+            key={index}
+            name={commentor.name}
+            comment={commentor.comment}
+            handleRemove={() => props.removeCommentAt(index)}
+            />
         )}
       </ul>
 
