@@ -275,7 +275,7 @@
 }
 .comment-input {
   border-radius: 6px;
-  width: 80%;
+  width: 88%;
   height: 17px;
   border-style: solid;
   border-width: thin;
@@ -284,6 +284,7 @@
   background-color: #f2f4f7;
   text-indent: 5px;
   margin-left: 3px;
+
 
 }
 .comment-input:focus {
@@ -294,4 +295,14 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+.comment-emojis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 75px;
+  z-index: 2;
+  position: absolute;
+  margin-left: 240px;
+
 }
