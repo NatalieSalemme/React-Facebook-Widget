@@ -28,7 +28,7 @@ const Comment = props => {
     </div>
     <div className="tooltip">
       <p className="like-reply">Reply</p>
-      <span className="tooltiptext">{ellipsisIcon}</span>
+      <span className="tooltiptext">Reply</span>
     </div>
     </div>
     </li>

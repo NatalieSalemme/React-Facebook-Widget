@@ -297,7 +297,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid blue; */
+  margin-top: -15px;
 }
 .comment-emojis {
   display: flex;
@@ -351,7 +351,7 @@
 }
 .commentor-and-comment {
   /* border: 1px solid green; */
-  padding: 0 4px;
+  padding: 2px 4px 6px 4px;
   background-color: #f2f4f7;
   border-radius: 8px;
   width: auto;
@@ -363,12 +363,15 @@
 .like-reply-container {
   /* border: 1px solid orange; */
   width: 60px;
+  height: 20px;
   display: flex;
   justify-content: space-around;
   margin-left: 40px;
+  margin-top: -5px;
+  margin-bottom: 8px;
 }
 .like-reply {
-  font-size: 8px;
+  font-size: 7px;
   color: blue;
   cursor: pointer;
   color: #3B5998;
