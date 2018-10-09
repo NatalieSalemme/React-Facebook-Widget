@@ -19,21 +19,21 @@ constructor(props) {
     commentors: [
       {
       name: 'Pam Beesly',
-      comment: 'I love my pens',
+      comment: "You'll have to share your recipe!",
       photo: <img
         className="avatar-img"
         src={require('./pam.jpg')}/>
     },
     {
       name: 'Jim Halpert',
-      comment: 'Blue shirts are my favorite',
+      comment: "I'll take this status as an announcement that you'll be bringing this to work tomorrow",
       photo: <img
         className="avatar-img"
         src={require('./jim.png')} />
     },
       {
-        name: 'Angela Kinsey',
-        comment: 'I hope my cat is ok',
+        name: 'Angela Martin',
+        comment: 'Just know that this CANNOT and WILL NOT be part of tomorrows party. Clear?',
         photo: <img
           className="avatar-img"
           src={require('./angela.jpg')}/>
@@ -83,7 +83,7 @@ componentDidMount() {
           avatarName={'Natalie Salemme'}/>
         <ThreeDots />
       </div>
-      <StatusText status={'this is my temporary status'}/>
+      <StatusText status={'New favorite dessert alert!'}/>
       <StatusPhoto />
       <LikesBar
         commentNumber={this.state.commentNumber}/>

@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const LikesBar = props => {
-  const likesList = ['Aria Montgomery', 'Spencer Hastings', 'Emily Fields',
-  'Hanna Marin', 'Alison DiLaurentis', 'Mona Vanderwaal', 'Ezra Fitz'];
+  const likesList = ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard',
+  'Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
+  'Toby Flenderson', 'Stanley Hudson', 'Creed Bratton', 'Meredith Palmer', 'Darryl Philbin'];
   let firstLikes = likesList.slice(0, 2).join(', ');
   let likesHover = likesList.map((name) =>
     <li className="likes-name-item" key={name.toString()}>
