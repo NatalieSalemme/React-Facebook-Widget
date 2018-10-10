@@ -43,7 +43,7 @@ export const LikesBar = props => {
       </span>
     </div>
     <p className="status-comments">{props.commentNumber}{props.commentNumber > 1
-      || props.commentNumber == 0 ? ' Comments' : ' Comment'}</p>
+      || props.commentNumber === 0 ? ' Comments' : ' Comment'}</p>
   </div>
 );
 }

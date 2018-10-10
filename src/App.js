@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ThreeDots from './ThreeDots';
-import Username from './Username';
-import StatusText from './StatusText';
+import ThreeDots from './components/ThreeDots';
+import Username from './components/Username';
+import StatusText from './components/StatusText';
 import StatusPhoto from './components/StatusPhoto';
-import LikesBar from './LikesBar';
-import LikeCommentShare from './LikeCommentShare';
-import CommentSection from './CommentSection';
+import LikesBar from './components/LikesBar';
+import LikeCommentShare from './components/LikeCommentShare';
+import CommentSection from './components/CommentSection';
+// import Comment from './Comment';
 import './App.css';
 
 class App extends Component {
@@ -17,28 +18,32 @@ constructor(props) {
     userName: "Natalie Salemme",
     avatar: <img
       className="avatar-img"
-      src={require('./avatar.jpg')}/>,
+      src={require('./avatar.jpg')}
+      alt="Current user avatar"/>,
     commentors: [
       {
       name: 'Pam Beesly',
       comment: "You'll have to share your recipe!",
       photo: <img
         className="avatar-img"
-        src={require('./pam.jpg')}/>
+        src={require('./pam.jpg')}
+        alt="Pam Beesly avatar"/>
     },
     {
       name: 'Jim Halpert',
       comment: "I'll take this status as an announcement that you'll be bringing this to work tomorrow",
       photo: <img
         className="avatar-img"
-        src={require('./jim.png')} />
+        src={require('./jim.png')}
+        alt="Jim Halpert avatar"/>
     },
       {
         name: 'Angela Martin',
         comment: 'Just know that this CANNOT and WILL NOT be part of tomorrows party. Clear?',
         photo: <img
           className="avatar-img"
-          src={require('./angela.jpg')}/>
+          src={require('./angela.jpg')}
+          alt="Angela Martin avatar"/>
       }
     ]
   }
@@ -72,9 +77,8 @@ newCommentorSubmitHandler = e => {
     pendingComment: ''
   });
 }
-// focusOnInput = () => {
-//   console.log('focus on me');
-//
+// handleReply = () => {
+//  return <Comment />
 // }
   render() {
     return (
@@ -94,7 +98,8 @@ newCommentorSubmitHandler = e => {
         handleNameInput={this.handleNameInput}
         value={this.state.pendingComment}
         newCommentorSubmitHandler={this.newCommentorSubmitHandler}
-        removeCommentAt={this.removeCommentAt}/>
+        removeCommentAt={this.removeCommentAt}
+        handleReply={this.handleReply}/>
     </div>
     );
   }

@@ -1,7 +1,5 @@
 import React from 'react';
-import './App.js'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import '../App.js'
 import Comment from './Comment';
 
 const Commentor = props => {
@@ -15,7 +13,7 @@ const Commentor = props => {
             comment={commentor.comment}
             photo={commentor.photo}
             handleRemove={() => props.removeCommentAt(index)}
-            />
+            handleReply={props.handleReply}/>
         )}
       </ul>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserDropDown } from './UserDropDown';
-
+// import './App.css';
 const Username = props => {
 
   let todaysDate = new Date();
@@ -17,7 +17,7 @@ const Username = props => {
     <div className="username-container">
       <div className="avatar-container">
       <img
-        src={require('./avatar.jpg')}
+        src={require('../avatar.jpg')}
         className="avatar-img"
         alt="avatar"/>
     </div>

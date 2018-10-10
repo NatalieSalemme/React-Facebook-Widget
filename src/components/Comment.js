@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'
+import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisH, faThumbsUp, faCircle, faHeart, faLaughSquint, faSurprise, faSadTear, faAngry } from '@fortawesome/free-solid-svg-icons';
 
@@ -38,14 +38,14 @@ const Comment = props => {
         <span className="heart-icon">{heartIcon}</span>
         <span className="laugh-icon">{laughIcon}</span>
         <span className="wow-icon">{wowIcon}</span>
+        <span className="sad-icon">{sadIcon}</span>
         <span className="angry-icon">{angryIcon}</span>
       </span>
     </div>
     <span className="circle-icon">{circleIcon}</span>
-    <div className="tooltip">
-      <p className="like-reply">Reply</p>
-      <span className="tooltiptext">Reply</span>
-    </div>
+      <p
+        className="like-reply"
+        onClick={props.handleReply}>Reply</p>
     </div>
     </li>
   );

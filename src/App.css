@@ -239,23 +239,45 @@
   cursor: pointer;
   color: #3B5998;
 }
+.likes-icon:hover {
+  font-size: 24px;
+}
 .heart-icon {
   /* border: 1px solid orange; */
   cursor: pointer;
   margin-left: 1px;
   color: #ed3b68;
 }
+.heart-icon:hover {
+  font-size: 24px;
+}
 .laugh-icon {
   color: #f4dc42;
   cursor: pointer;
+}
+.laugh-icon:hover {
+  font-size: 24px;
 }
 .wow-icon {
   color: #f4dc42;
   cursor: pointer;
 }
+.wow-icon:hover {
+  font-size: 24px;
+}
+.sad-icon {
+  color: #f4dc42;
+  cursor: pointer;
+}
+.sad-icon:hover {
+  font-size: 24px;
+}
 .angry-icon {
   color: rgba(248,80,50,1);
   cursor: pointer;
+}
+.angry-icon:hover {
+  font-size: 24px;
 }
 .likes-header {
   font-weight: bold;
@@ -419,7 +441,8 @@ p.share-icon-container {
 
 .tooltip .emoji-hover {
     visibility: hidden;
-    width: 90px;
+    min-width: 90px;
+    width: auto;
     background-color: white;
     color: #fff;
     text-align: center;
@@ -428,12 +451,13 @@ p.share-icon-container {
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    margin-left: -25px;
+    margin: 0 0 -10px -25px;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
     border: .9px solid silver;
     border-style: outset;
+    align-items: center;
 
 }
 .tooltip .emoji-hover::after {
