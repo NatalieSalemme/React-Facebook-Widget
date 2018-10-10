@@ -59,7 +59,10 @@ export const LikesBar = props => {
         <ul className="likes-name-container">{loveLikeHover}</ul>
       </span>
     </div>
-    <p className="status-comments">{props.commentNumber}{props.commentNumber > 1
+    <p
+      className="status-comments"
+      onClick={props.showCommentSection}
+      >{props.commentNumber}{props.commentNumber > 1
       || props.commentNumber === 0 ? ' Comments' : ' Comment'}</p>
   </div>
 );

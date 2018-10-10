@@ -15,6 +15,7 @@ constructor(props) {
   this.state = {
     commentNumber: 3,
     pendingComment: "",
+    showCommentSection: true,
     userName: "Natalie Salemme",
     likeList: ['Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
     'Toby Flenderson', 'Stanley Hudson', 'Creed Bratton', 'Meredith Palmer', 'Darryl Philbin'],
@@ -82,20 +83,33 @@ newCommentorSubmitHandler = e => {
     pendingComment: ''
   });
 }
+// addLike() {
+//   let newLike = this.state.likeList.concat(this.state.userName);
+//   let popLike = this.state.likeList.slice(0, this.state.likeList.length - 1);
+//   this.setState({
+//     likeList: this.state.likesList.contains(this.state.username) ? newLike : 'pop'
+//   });
+// }
 addLike() {
-  let newLike = this.state.likeList.concat('Natalie Salemme');
+  let newLike = this.state.likeList.concat(this.state.userName);
+  let popLike = this.state.likeList.slice(0, this.state.likeList.length - 1);
   this.setState({
     likeList: newLike
   });
-}
+  }
 
 addLove() {
-  let newLove = this.state.loveList.concat('Natalie Salemme');
+  let newLove = this.state.loveList.concat(this.state.userName);
   this.setState({
     loveList: newLove
   });
 }
-
+showCommentSection = e => {
+  e.preventDefault();
+  this.setState({
+    showCommentSection: !this.state.showCommentSection
+  })
+}
 // handleReply = () => {
 //  return <Comment />
 // }
@@ -114,18 +128,20 @@ addLove() {
         loveList={this.state.loveList}
         likeList={this.state.likeList}
         addLove={this.addLove}
-        addLike={this.addLike}/>
+        addLike={this.addLike}
+        showCommentSection={this.showCommentSection}/>
       <LikeCommentShare
         focusOnInput={this.focusOnInput}
         addLike={this.addLike}
         />
-      <CommentSection
-        commentors={this.state.commentors}
-        handleNameInput={this.handleNameInput}
-        value={this.state.pendingComment}
-        newCommentorSubmitHandler={this.newCommentorSubmitHandler}
-        removeCommentAt={this.removeCommentAt}
-        handleReply={this.handleReply}/>
+        {this.state.showCommentSection ? <CommentSection
+          commentors={this.state.commentors}
+          handleNameInput={this.handleNameInput}
+          value={this.state.pendingComment}
+          newCommentorSubmitHandler={this.newCommentorSubmitHandler}
+          removeCommentAt={this.removeCommentAt}
+          handleReply={this.handleReply}/> : (null)}
+
     </div>
     );
   }
