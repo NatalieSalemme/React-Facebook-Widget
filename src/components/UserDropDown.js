@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faCaretDown, faGlobe, faUserTimes, faLock } from '@fortawesome/free-solid-svg-icons';
 
 
 export class UserDropDown extends React.Component {
@@ -21,28 +21,44 @@ export class UserDropDown extends React.Component {
   render() {
     const usersIcon = <FontAwesomeIcon icon={faUsers} size="xs"/>
     const caretDown = <FontAwesomeIcon icon={faCaretDown} size="xs"/>
+    const globeIcon = <FontAwesomeIcon icon={faGlobe} size="xs"/>
+    const usersExceptIcon = <FontAwesomeIcon icon={faUserTimes} size="xs"/>
+    const lockIcon = <FontAwesomeIcon icon={faLock} size="xs"/>
     return (
       <div>
         <div onClick={this.showMenu}
           className="users-icon-dropdown tooltip">
            <span className="tooltiptext">Your friends</span>
-           <span className="users-icon">{usersIcon}</span>
-          <span className="caret-down">{caretDown}</span>
+           <span className="users-icon">
+             {this.state.showMenu ? <span style={{backgroundColor: '#3B5998', marginLeft: '-1px', padding: '0 1px'}}>{usersIcon}</span> : <span>{usersIcon}</span>}
+           </span>
+          <span className="caret-down">
+          {this.state.showMenu ? <span style={{backgroundColor: '#3B5998'}}>{caretDown}</span> : <span>{caretDown}</span>}
+          </span>
         </div>
         {
           this.state.showMenu ? (
             <div
-              className="menu"
+              className="users-icon-menu"
               ref={(element) => {
                 this.dropdownMenu = element;
               }}
               >
-            <div>
-                <button>Public</button>
-                <button>Friends</button>
-                <button>Friends except...</button>
-                <button>Only me</button>
-                <button>More...</button>
+            <div className="users-icon-container">
+                <button className="users-icon-btn">
+                  <span>{globeIcon}</span>
+                  Public
+                </button>
+                <button className="users-icon-btn">
+                  <span>{usersIcon}</span>
+                    Friends</button>
+                <button className="users-icon-btn">
+                  <span>{usersExceptIcon}</span>
+                  Friends except...</button>
+                <button className="users-icon-btn">
+                  <span>{lockIcon}</span>
+                  Only me</button>
+                <button className="users-icon-btn">More...</button>
               </div>
             </div>
           )
@@ -54,46 +70,5 @@ export class UserDropDown extends React.Component {
     );
   }
 }
-//   render() {
-//     const usersIcon = <FontAwesomeIcon icon={faUsers} size="xs"/>
-//     const caretDown = <FontAwesomeIcon icon={faCaretDown} size="xs"/>
-//     return (
-//       <div>
-//         <div className="users-icon-dropdown tooltip" onClick={this.showMenu}>
-//          <span className="tooltiptext">Your friends</span>
-//        <span className="users-icon">{usersIcon}</span>
-//        <span className="caret-down">{caretDown}</span>
-//        </div>
-//     </div>
-//
-//     );
-//   }
-// }
-export default UserDropDown;
 
-// export class UserDropDown extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       dropdownOpen: false
-//     }
-//     this.toggle = this.toggle.bind(this);
-//   }
-// toggle() {
-//   this.setState(prevState => ({
-//     dropdownOpen: !prevState.dropdownOpen
-//   }));
-// }
-//   render() {
-//     return (
-//       <button onClick={this.toggle}>Dropdown</button>
-//       if(this.state.dropDownOpen) {
-//         console.log('its open');
-//       } else {
-//         console.log('its closed');
-//       }
-//     )
-//   }
-//
-// }
-// export default UserDropDown;
+export default UserDropDown;

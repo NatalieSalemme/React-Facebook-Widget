@@ -79,6 +79,31 @@
   flex-direction: row;
   height: 40px;
 }
+.users-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: orange;
+  height: 100px;
+  position: absolute;
+  background-color: white;
+  border: .7px solid black;
+  border-radius: 2px;
+}
+.users-icon-menu {
+  background-color: #f2f4f7;
+}
+.users-icon-btn {
+  background-color: #f2f4f7;
+  font-weight: 600;
+  font-family: "HelveticaNeue", "Helvetica", "Arial";
+  cursor: pointer;
+  font-size: 9px;
+}
+.users-icon-btn:hover {
+  background-color: #3B5998;
+  color: white;
+}
 .avatar-img {
   height: 30px;
   width: 30px;
@@ -116,6 +141,7 @@
   font-size: 8px;
   position: relative;
   display: inline;
+  z-index: 2;
 }
 .users-icon-dropdown:hover {
   background-color: #e5e0e0;
@@ -202,6 +228,7 @@
   height: 200px;
   width: 320px;
   margin-top: .5em;
+
 
 }
 .likes-bar {
