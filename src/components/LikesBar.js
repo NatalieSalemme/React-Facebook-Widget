@@ -4,9 +4,8 @@ import { faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 export const LikesBar = props => {
-  let likesList = [ 'Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
-  'Toby Flenderson', 'Stanley Hudson', 'Creed Bratton', 'Meredith Palmer', 'Darryl Philbin'];
-  let loveList = ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard'];
+  let likesList = (props.likeList)
+  let loveList = (props.loveList);
   let loveLike = likesList.concat(loveList);
   let firstLikes = loveLike.slice(0, 2).join(', ');
   let likesHover = likesList.map((name) =>
@@ -24,20 +23,28 @@ export const LikesBar = props => {
   </li>);
   const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="xs"/>
   const heartIcon = <FontAwesomeIcon icon={faHeart} size="xs"/>
+
   return (
   <div className="likes-bar">
     <div className="likes-icons">
       <div className="tooltip likes-icon-tooltip">
-        <span className="likes-icon">{ thumbsUpIcon }</span>
+        <span
+          className="likes-icon"
+            onClick={props.addLike}
+            >{ thumbsUpIcon }</span>
         <span className="tooltiptext likes-icon-tooltiptext">
           <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">
-            <span className="likes-header">Like</span>
+            <span
+              className="likes-header">Like</span>
             {likesHover}
           </ul>
         </span>
     </div>
     <div className="tooltip likes-icon-tooltip">
-      <span className="heart-icon">{ heartIcon }</span>
+      <span
+        className="heart-icon"
+        onClick={props.addLove}
+        >{ heartIcon }</span>
       <span className="tooltiptext likes-icon-tooltiptext">
         <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">
           <span className="likes-header">Love</span>

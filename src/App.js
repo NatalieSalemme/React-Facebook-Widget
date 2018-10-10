@@ -16,6 +16,9 @@ constructor(props) {
     commentNumber: 3,
     pendingComment: "",
     userName: "Natalie Salemme",
+    likeList: ['Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
+    'Toby Flenderson', 'Stanley Hudson', 'Creed Bratton', 'Meredith Palmer', 'Darryl Philbin'],
+    loveList: ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard'],
     avatar: <img
       className="avatar-img"
       src={require('./avatar.jpg')}
@@ -47,6 +50,8 @@ constructor(props) {
       }
     ]
   }
+  this.addLike = this.addLike.bind(this);
+  this.addLove = this.addLove.bind(this);
 }
 removeCommentAt = index => {
   this.setState({
@@ -77,6 +82,20 @@ newCommentorSubmitHandler = e => {
     pendingComment: ''
   });
 }
+addLike() {
+  let newLike = this.state.likeList.concat('Natalie Salemme');
+  this.setState({
+    likeList: newLike
+  });
+}
+
+addLove() {
+  let newLove = this.state.loveList.concat('Natalie Salemme');
+  this.setState({
+    loveList: newLove
+  });
+}
+
 // handleReply = () => {
 //  return <Comment />
 // }
@@ -91,8 +110,15 @@ newCommentorSubmitHandler = e => {
       <StatusText status={'New favorite dessert alert!'}/>
       <StatusPhoto />
       <LikesBar
-        commentNumber={this.state.commentNumber}/>
-      <LikeCommentShare focusOnInput={this.focusOnInput}/>
+        commentNumber={this.state.commentNumber}
+        loveList={this.state.loveList}
+        likeList={this.state.likeList}
+        addLove={this.addLove}
+        addLike={this.addLike}/>
+      <LikeCommentShare
+        focusOnInput={this.focusOnInput}
+        addLike={this.addLike}
+        />
       <CommentSection
         commentors={this.state.commentors}
         handleNameInput={this.handleNameInput}

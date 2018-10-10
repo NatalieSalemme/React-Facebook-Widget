@@ -9,9 +9,12 @@ export const LikeCommentShare = props => {
   const shareIcon = <FontAwesomeIcon icon={faShare} size="lg"/>
   return (
   <div className="like-comment-share-bar">
-    <p className="likes-icon-container"><span className="likes-icon" style={{marginRight: '3px'}}>
+    <p className="likes-icon-container"><span
+
+      style={{marginRight: '3px', color: '#3B5998'}}>
       {thumbsUpIcon}
-      </span>Like
+    </span>
+    <span onClick={props.addLike}>Like</span>
     </p>
     <p
       className="comments-icon-container"
@@ -19,7 +22,8 @@ export const LikeCommentShare = props => {
       >
       <span style={{marginRight: '3px'}}>
         {commentIcon}
-      </span>Comment
+      </span>
+      <span>Comment</span>
     </p>
     <p className="share-icon-container"><span style={{marginRight: '3px', color: '#ed3b68'}}>{shareIcon}</span>Share</p>
   </div>
