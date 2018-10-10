@@ -14,3 +14,4 @@ What I still need to do:
 -add a timer that counts how many minutes/hours/days/weeks you made the comment or post
 -if you hit reply, your comment gets posted under theirs
 -onclick actions for emojis in comment input
+-type checking with proptypes for development

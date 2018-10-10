@@ -1,6 +1,8 @@
 import React from 'react';
 import { UserDropDown } from './UserDropDown';
-// import './App.css';
+import '../App.css';
+import PropTypes from 'prop-types';
+
 const Username = props => {
 
   let todaysDate = new Date();
@@ -33,5 +35,8 @@ const Username = props => {
    </div>
   </div>
   );
+}
+Username.propTypes = {
+  avatarName: PropTypes.string.isRequired
 }
 export default Username;

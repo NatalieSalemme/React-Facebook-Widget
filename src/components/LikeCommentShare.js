@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faCommentAlt, faShare } from '@fortawesome/free-solid-svg-icons';
+// import PropTypes from 'prop-types';
 
 export const LikeCommentShare = props => {
   const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="lg"/>
@@ -14,7 +15,8 @@ export const LikeCommentShare = props => {
     </p>
     <p
       className="comments-icon-container"
-      onClick={props.focusOnInput}>
+      // onClick={props.focusOnInput}
+      >
       <span style={{marginRight: '3px'}}>
         {commentIcon}
       </span>Comment
@@ -23,5 +25,7 @@ export const LikeCommentShare = props => {
   </div>
   );
 }
-
+// LikeCommentShare.propTypes = {
+//   focusOnInput: PropTypes.func.isRequired
+// }
 export default LikeCommentShare;

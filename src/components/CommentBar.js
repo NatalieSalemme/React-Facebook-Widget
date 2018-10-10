@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faCamera, faStickyNote, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 export const CommentBar = props => {
   const smileIcon = <FontAwesomeIcon icon={faSmile} size="xs"/>
@@ -42,5 +43,10 @@ export const CommentBar = props => {
       </div>
     </div>
   );
+}
+CommentBar.propTypes = {
+  newCommentorSubmitHandler: PropTypes.func.isRequired,
+  handleNameInput: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 }
 export default CommentBar;

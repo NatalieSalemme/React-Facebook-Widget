@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 export const LikesBar = props => {
   const likesList = ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard',
@@ -46,5 +47,9 @@ export const LikesBar = props => {
       || props.commentNumber === 0 ? ' Comments' : ' Comment'}</p>
   </div>
 );
+}
+
+LikesBar.propTypes = {
+  commentNumber: PropTypes.number.isRequired
 }
 export default LikesBar;

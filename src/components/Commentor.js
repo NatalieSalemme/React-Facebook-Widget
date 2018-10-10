@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.js'
 import Comment from './Comment';
+import PropTypes from 'prop-types';
 
 const Commentor = props => {
   return (
@@ -19,5 +20,8 @@ const Commentor = props => {
 
     </div>
   );
+}
+Commentor.propTypes = {
+  commentors: PropTypes.array.isRequired
 }
 export default Commentor;

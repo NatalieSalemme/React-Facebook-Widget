@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisH, faThumbsUp, faCircle, faHeart, faLaughSquint, faSurprise, faSadTear, faAngry } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const Comment = props => {
   const ellipsisIcon = <FontAwesomeIcon icon={faEllipsisH} size="xs"/>
@@ -13,7 +14,7 @@ const Comment = props => {
   const sadIcon = <FontAwesomeIcon icon={faSadTear} size="xs"/>
   const angryIcon = <FontAwesomeIcon icon={faAngry} size="xs"/>
   return (
-    <li key={props.key} className="comment-list">
+    <li className="comment-list">
       <div className="comment">
       <span>{props.photo} </span>
       <div className="commentor-and-comment">
@@ -45,9 +46,18 @@ const Comment = props => {
     <span className="circle-icon">{circleIcon}</span>
       <p
         className="like-reply"
-        onClick={props.handleReply}>Reply</p>
+        // onClick={props.handleReply}
+        >Reply</p>
     </div>
     </li>
   );
+}
+Comment.propTypes = {
+  photo: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  comment: PropTypes.string.isRequired,
+  handleRemove: PropTypes.func.isRequired,
+  // handleReply: PropTypes.func.isRequired
+
 }
 export default Comment;

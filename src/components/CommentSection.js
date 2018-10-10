@@ -3,6 +3,7 @@ import '../App.css';
 import Commentor from './Commentor';
 import CommentBar from './CommentBar';
 
+
 export const CommentSection = props => {
   return (
     <div className="comment-section">
