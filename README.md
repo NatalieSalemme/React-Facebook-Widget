@@ -13,4 +13,4 @@ What I still need to do:
 -on comments click, hide the comments and input
 -add a timer that counts how many minutes/hours/days/weeks you made the comment or post
 -if you hit reply, your comment gets posted under theirs
--when hovering over emoji's, show popup and make the emoji darker
+-onclick actions for emojis in comment input

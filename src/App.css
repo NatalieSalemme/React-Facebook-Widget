@@ -245,6 +245,18 @@
   margin-left: 1px;
   color: #ed3b68;
 }
+.laugh-icon {
+  color: #f4dc42;
+  cursor: pointer;
+}
+.wow-icon {
+  color: #f4dc42;
+  cursor: pointer;
+}
+.angry-icon {
+  color: rgba(248,80,50,1);
+  cursor: pointer;
+}
 .likes-header {
   font-weight: bold;
 }
@@ -403,4 +415,37 @@ p.share-icon-container {
   font-size: 3px;
   color: #dee1e5;
   margin-top: 10px;
+}
+
+.tooltip .emoji-hover {
+    visibility: hidden;
+    width: 90px;
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    margin-left: -25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    border: .9px solid silver;
+    border-style: outset;
+
+}
+.tooltip .emoji-hover::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: silver transparent transparent transparent;
+}
+.tooltip:hover .emoji-hover {
+    visibility: visible;
 }
