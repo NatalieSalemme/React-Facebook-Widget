@@ -4,15 +4,24 @@ import { faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 export const LikesBar = props => {
-  const likesList = ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard',
-  'Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
+  let likesList = [ 'Ryan Howard', 'Kevin Malone', 'Phyllis Vance', 'Oscar Martinez', 'Erin Hannon',
   'Toby Flenderson', 'Stanley Hudson', 'Creed Bratton', 'Meredith Palmer', 'Darryl Philbin'];
-  let firstLikes = likesList.slice(0, 2).join(', ');
+  let loveList = ['Michael Scott', 'Dwight Schrute', 'Kelly Kapoor', 'Andy Bernard'];
+  let loveLike = likesList.concat(loveList);
+  let firstLikes = loveLike.slice(0, 2).join(', ');
   let likesHover = likesList.map((name) =>
     <li className="likes-name-item" key={name.toString()}>
       {name}
     </li>
   );
+  let loveHover = loveList.map((name) =>
+  <li className="likes-name-item" key={name.toString()}>
+    {name}
+  </li>);
+  let loveLikeHover = loveLike.map((name) =>
+  <li className="likes-name-item" key={name.toString()}>
+    {name}
+  </li>);
   const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="xs"/>
   const heartIcon = <FontAwesomeIcon icon={faHeart} size="xs"/>
   return (
@@ -32,15 +41,15 @@ export const LikesBar = props => {
       <span className="tooltiptext likes-icon-tooltiptext">
         <ul style={{width: 'auto', fontSize: '6px'}} className="likes-name-container">
           <span className="likes-header">Love</span>
-          {likesHover}
+          {loveHover}
         </ul>
       </span>
   </div>
     </div>
     <div className="tooltip">
-      <p className="likes-list">{firstLikes} and {likesList.length - 2} others</p>
+      <p className="likes-list">{firstLikes} and {loveLike.length - 2} others</p>
       <span className="tooltiptext" style={{width: 'auto', height: 'auto'}}>
-        <ul className="likes-name-container">{likesHover}</ul>
+        <ul className="likes-name-container">{loveLikeHover}</ul>
       </span>
     </div>
     <p className="status-comments">{props.commentNumber}{props.commentNumber > 1

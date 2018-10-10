@@ -219,6 +219,9 @@
   text-decoration: underline;
   cursor: pointer;
 }
+.likes-list {
+  margin-left: -80px;
+}
  .likes-name-item {
   margin: auto;
   list-style-type: none;
