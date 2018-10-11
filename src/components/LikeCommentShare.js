@@ -38,7 +38,7 @@ showMenu = e => {
       <p className="likes-icon-container tooltip">
         <span style={{marginRight: '3px', color: '#3B5998'}}>{thumbsUpIcon}</span>
         <span
-          // onClick={props.addLike}
+          onClick={this.props.addLike}
           >Like</span>
         <span className="tooltiptext emoji-hover" style={{marginLeft: '30px', height: '20px'}}>
              <span className="likes-icon">{smThumbsUpIcon}</span>
@@ -88,14 +88,12 @@ showMenu = e => {
                 <span>Share on a friend's timeline</span>
               </div>
             </div>
-
           </div>
         )
         : (
           null
         )
       }
-
     </div>
   </div>
     );
