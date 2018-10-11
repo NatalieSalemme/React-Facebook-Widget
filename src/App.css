@@ -79,12 +79,12 @@
   flex-direction: row;
   height: 40px;
 }
+
 .users-icon-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: orange;
-  height: 100px;
+  height: 140px;
   position: absolute;
   background-color: white;
   border: .7px solid black;
@@ -99,11 +99,32 @@
   font-family: "HelveticaNeue", "Helvetica", "Arial";
   cursor: pointer;
   font-size: 9px;
+  padding-left: 8px;
+}
+.users-dropdown-subtext {
+  font-size: 6px;
+  color: gray;
+  font-family: "HelveticaNeue", "Helvetica", "Arial";
 }
 .users-icon-btn:hover {
   background-color: #3B5998;
   color: white;
 }
+
+.users-icon-btn:hover .users-dropdown-subtext {
+  color: white;
+}
+.users-dropdown-icon {
+  padding-right: 4px;
+}
+.users-dropdown-see {
+  font-size: 7px;
+  margin-bottom: -4px;
+  margin-top: -.5px;
+  color: gray;
+  padding-left: 4px;
+}
+
 .avatar-img {
   height: 30px;
   width: 30px;

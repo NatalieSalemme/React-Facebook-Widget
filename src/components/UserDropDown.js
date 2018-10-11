@@ -30,10 +30,10 @@ export class UserDropDown extends React.Component {
           className="users-icon-dropdown tooltip">
            <span className="tooltiptext">Your friends</span>
            <span className="users-icon">
-             {this.state.showMenu ? <span style={{backgroundColor: '#3B5998', marginLeft: '-1px', padding: '0 1px'}}>{usersIcon}</span> : <span>{usersIcon}</span>}
+             {this.state.showMenu ? <span style={{backgroundColor: '#3B5998', marginLeft: '-1px', padding: '0 1px', color: 'white'}}>{usersIcon}</span> : <span>{usersIcon}</span>}
            </span>
           <span className="caret-down">
-          {this.state.showMenu ? <span style={{backgroundColor: '#3B5998'}}>{caretDown}</span> : <span>{caretDown}</span>}
+          {this.state.showMenu ? <span style={{backgroundColor: '#3B5998', color: 'white'}}>{caretDown}</span> : <span>{caretDown}</span>}
           </span>
         </div>
         {
@@ -45,20 +45,34 @@ export class UserDropDown extends React.Component {
               }}
               >
             <div className="users-icon-container">
-                <button className="users-icon-btn">
-                  <span>{globeIcon}</span>
-                  Public
-                </button>
-                <button className="users-icon-btn">
-                  <span>{usersIcon}</span>
-                    Friends</button>
-                <button className="users-icon-btn">
-                  <span>{usersExceptIcon}</span>
-                  Friends except...</button>
-                <button className="users-icon-btn">
-                  <span>{lockIcon}</span>
-                  Only me</button>
-                <button className="users-icon-btn">More...</button>
+              <p className="users-dropdown-see">Who should see this?</p>
+                <div className="users-icon-btn">
+                  <span className="users-dropdown-icon">{globeIcon}</span>
+                    Public
+                    <br />
+                    <span className="users-dropdown-subtext">Anyone on or off Facebook</span>
+                </div>
+                <div className="users-icon-btn">
+                  <span className="users-dropdown-icon">{usersIcon}</span>
+                    Friends
+                    <br />
+                    <div className="users-dropdown-subtext">Your friends on Facebook</div>
+                  </div>
+                <div className="users-icon-btn">
+                  <span className="users-dropdown-icon">{usersExceptIcon}</span>
+                  Friends except...
+                  <br />
+                  <div className="users-dropdown-subtext">Don't show to some friends</div>
+                </div>
+                <div className="users-icon-btn">
+                  <span className="users-dropdown-icon">{lockIcon}</span>
+                  Only me
+                  <br />
+                  <span className="users-dropdown-subtext">Only me</span>
+                </div>
+                <div className="users-icon-btn">
+                  More...
+                </div>
               </div>
             </div>
           )
