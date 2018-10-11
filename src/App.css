@@ -90,6 +90,19 @@
   border: .7px solid black;
   border-radius: 2px;
 }
+.share-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50px;
+  width: 90px;
+  position: absolute;
+  background-color: white;
+  border-style:  groove;
+  border-radius: 2px;
+  margin-left: -90px;
+  margin-top: 30px;
+}
 .users-icon-menu {
   background-color: #f2f4f7;
 }
@@ -101,11 +114,21 @@
   font-size: 9px;
   padding-left: 8px;
 }
+.share-dd-btn {
+  font-weight: 500;
+  font-family: "HelveticaNeue", "Helvetica", "Arial";
+  cursor: pointer;
+  font-size: 6px;
+  padding-left: 8px;
+  color: #2e2f33;
+
+}
 .users-dropdown-subtext {
   font-size: 6px;
   color: gray;
   font-family: "HelveticaNeue", "Helvetica", "Arial";
 }
+.share-dd-btn:hover,
 .users-icon-btn:hover {
   background-color: #3B5998;
   color: white;
