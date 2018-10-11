@@ -6,52 +6,40 @@
   margin-top: 5em;
   height: auto;
 }
-.dropbtn {
-  color: black;
-  font-size: 16px;
-  border: none;
-  color: #6a6d72;
-  font-size: 20px;
-}
-.dropdown {
-  position: relative;
-  display: inline;
-}
-.dropdown-content {
-  display: none;
+
+.dots-dd-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 130px;
+  width: 90px;
   position: absolute;
   background-color: white;
-  min-width: 108px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 3px;
+  border: .4px solid lightgray;
+  border-radius: 2px;
+  margin-left: -80px;
+  margin-top: -15px
 }
-.dropdown-content a {
-  color: black;
-  padding: 6px 10px;
-  font-size: 5.5px;
+.dots-dd-btn a {
   text-decoration: none;
-  display: block;
-  justify-content: flex-end;
-  line-height: 1pt;
-}
-.dropdown-content a:hover {
-  background-color: #3B5998;
-  color: white;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown:hover .dropbtn {
-  cursor: pointer;
   color: black;
+  font-size: 5.5px;
+}
+.dots-dd-btn {
+  font-weight: 500;
+  font-family: "HelveticaNeue", "Helvetica", "Arial";
+  cursor: pointer;
+  font-size: 6px;
+  color: #2e2f33;
+  padding: 2px 0 2px 8px;
 }
 .dots-container {
-  /* border: 1px solid blue; */
-  margin-right: 4px;
+  margin: -20px 4px 0 0;
   height: 40px;
 }
-
+.three-dots-icon {
+  cursor: pointer;
+}
 .under-horizontal-bar:after {
   content: "";
   display: block;
@@ -63,6 +51,7 @@
 }
 .bookmark {
   padding-right: 4px;
+  color: gray;
 }
 .username {
   color: #3B5998;
@@ -140,7 +129,8 @@
   font-family: "HelveticaNeue", "Helvetica", "Arial";
 }
 .share-dd-btn:hover,
-.users-icon-btn:hover {
+.users-icon-btn:hover,
+.dots-dd-btn:hover {
   background-color: #3B5998;
   color: white;
 }
