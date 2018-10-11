@@ -20,7 +20,8 @@ export const CommentBar = props => {
         type="text"
         placeholder="Write a comment..."
         onChange={props.handleNameInput}
-        value={props.value}/>
+        value={props.value}
+        ref={props.inputCommentRef}/>
         <button className="comment-submit" type="submit" name="submit" value="submit" >Submit</button>
       </form>
       <div className="comment-emojis">

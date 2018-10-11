@@ -53,6 +53,7 @@ constructor(props) {
   }
   this.addLike = this.addLike.bind(this);
   this.addLove = this.addLove.bind(this);
+  this.inputCommentRef = React.createRef();
 }
 removeCommentAt = index => {
   this.setState({
@@ -110,9 +111,10 @@ showCommentSection = e => {
     showCommentSection: !this.state.showCommentSection
   })
 }
-// handleReply = () => {
-//  return <Comment />
-// }
+handleCommentInput = event => {
+  this.inputCommentRef.current.focus();
+}
+
   render() {
     return (
       <div className="App">
@@ -133,6 +135,7 @@ showCommentSection = e => {
       <LikeCommentShare
         focusOnInput={this.focusOnInput}
         addLike={this.addLike}
+        handleCommentInput={this.handleCommentInput}
         />
         {this.state.showCommentSection ? <CommentSection
           commentors={this.state.commentors}
@@ -140,7 +143,9 @@ showCommentSection = e => {
           value={this.state.pendingComment}
           newCommentorSubmitHandler={this.newCommentorSubmitHandler}
           removeCommentAt={this.removeCommentAt}
-          handleReply={this.handleReply}/> : (null)}
+          handleReply={this.handleReply}
+          inputCommentRef={this.inputCommentRef}
+        /> : (null)}
 
     </div>
     );

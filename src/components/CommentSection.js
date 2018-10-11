@@ -16,6 +16,7 @@ export const CommentSection = props => {
         handleNameInput={props.handleNameInput}
         value={props.value}
         newCommentorSubmitHandler={props.newCommentorSubmitHandler}
+        inputCommentRef={props.inputCommentRef}
         />
     </div>
   );
