@@ -124,7 +124,14 @@
   color: gray;
   padding-left: 4px;
 }
-
+.users-dropdown-more {
+  font-size: 8px;
+  margin-bottom: -4px;
+  margin-top: -.5px;
+  color: black;
+  padding-left: 7px;
+  padding-bottom: 2px;
+}
 .avatar-img {
   height: 30px;
   width: 30px;
@@ -509,6 +516,7 @@ p.share-icon-container {
     border: .9px solid silver;
     border-style: outset;
     align-items: center;
+    font-size: 13px;
 
 }
 .tooltip .emoji-hover::after {

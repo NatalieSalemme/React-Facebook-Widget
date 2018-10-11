@@ -1,35 +1,70 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faCommentAlt, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faCommentAlt, faShare, faEllipsisH, faThumbsUp, faCircle, faHeart, faLaughSquint, faSurprise, faSadTear, faAngry } from '@fortawesome/free-solid-svg-icons';
 // import PropTypes from 'prop-types';
 
 export const LikeCommentShare = props => {
   const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="lg"/>
   const commentIcon = <FontAwesomeIcon icon={faCommentAlt} size="lg"/>
   const shareIcon = <FontAwesomeIcon icon={faShare} size="lg"/>
-  return (
-  <div className="like-comment-share-bar">
-    <p className="likes-icon-container"><span
+  const heartIcon = <FontAwesomeIcon icon={faHeart} size="xs"/>
+  const laughIcon = <FontAwesomeIcon icon={faLaughSquint} size="xs"/>
+  const wowIcon = <FontAwesomeIcon icon={faSurprise} size="xs"/>
+  const sadIcon = <FontAwesomeIcon icon={faSadTear} size="xs"/>
+  const angryIcon = <FontAwesomeIcon icon={faAngry} size="xs"/>
+  const smThumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="xs"/>
 
-      style={{marginRight: '3px', color: '#3B5998'}}>
-      {thumbsUpIcon}
-    </span>
-    <span onClick={props.addLike}>Like</span>
-    </p>
-    <p
-      className="comments-icon-container"
-      // onClick={props.focusOnInput}
-      >
-      <span style={{marginRight: '3px'}}>
-        {commentIcon}
-      </span>
-      <span>Comment</span>
-    </p>
-    <p className="share-icon-container"><span style={{marginRight: '3px', color: '#ed3b68'}}>{shareIcon}</span>Share</p>
-  </div>
-  );
-}
-// LikeCommentShare.propTypes = {
-//   focusOnInput: PropTypes.func.isRequired
-// }
-export default LikeCommentShare;
+
+  return (
+    <div className="like-comment-share-bar">
+      <p className="likes-icon-container tooltip">
+        <span style={{marginRight: '3px', color: '#3B5998'}}>{thumbsUpIcon}</span>
+        <span onClick={props.addLike}>Like</span>
+        <span className="tooltiptext emoji-hover" style={{marginLeft: '30px', height: '20px'}}>
+             <span className="likes-icon">{smThumbsUpIcon}</span>
+             <span className="heart-icon">{heartIcon}</span>
+             <span className="laugh-icon">{laughIcon}</span>
+             <span className="wow-icon">{wowIcon}</span>
+             <span className="sad-icon">{sadIcon}</span>
+             <span className="angry-icon">{angryIcon}</span>
+          </span>
+      </p>
+      <p
+        className="comments-icon-container"
+        // onClick={props.focusOnInput}
+        >
+        <span style={{marginRight: '3px'}}>
+          {commentIcon}
+        </span>
+        <span>Comment</span>
+      </p>
+      <p className="share-icon-container"><span style={{marginRight: '3px', color: '#ed3b68'}}>{shareIcon}</span>Share</p>
+    </div>
+    );
+  }
+  // LikeCommentShare.propTypes = {
+  //   focusOnInput: PropTypes.func.isRequired
+  // }
+  export default LikeCommentShare;
+
+
+
+
+  // <div className="like-reply-container">
+  //   <div className="tooltip">
+  //   <p className="like-reply">Like</p>
+  //   <span className="tooltiptext emoji-hover">
+  //     <span className="likes-icon">{thumbsUpIcon}</span>
+  //     <span className="heart-icon">{heartIcon}</span>
+  //     <span className="laugh-icon">{laughIcon}</span>
+  //     <span className="wow-icon">{wowIcon}</span>
+  //     <span className="sad-icon">{sadIcon}</span>
+  //     <span className="angry-icon">{angryIcon}</span>
+  //   </span>
+  // </div>
+  // <span className="circle-icon">{circleIcon}</span>
+  //   <p
+  //     className="like-reply"
+  //     // onClick={props.handleReply}
+  //     >Reply</p>
+  // </div>

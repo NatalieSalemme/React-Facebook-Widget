@@ -70,9 +70,10 @@ export class UserDropDown extends React.Component {
                   <br />
                   <span className="users-dropdown-subtext">Only me</span>
                 </div>
-                <div className="users-icon-btn">
-                  More...
-                </div>
+                  <p className="users-dropdown-more">
+                    <span style={{marginLeft: '2px', paddingRight: '3px'}}>{caretDown}</span>
+                    More...
+                  </p>
               </div>
             </div>
           )
