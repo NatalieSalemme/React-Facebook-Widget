@@ -160,13 +160,29 @@
   width: 30px;
   border-radius: 50%;
 }
+.avatar-name-hover {
+  font-size: 10px;
+  color: white;
+  margin: -25px 0 0 10px;
+  position: relative;
+  z-index: 3;
+}
+.profile-hover-img {
+  width: 170px;
+  height: 55px;
+  margin-top: -5px;
+  position: relative;
+  z-index: 2;
+}
+
 .profile-hover-avatar {
   height: 40px;
   width: 40px;
-  margin: -25px 70px 0 -39px;
+  margin: 25px 0 0 -165px;
   border: 2px solid white;
-  z-index: 3;
   border-radius: 2px;
+  position:absolute;
+  z-index: 4;
 }
 .avatar-img:hover,
 .username:hover {
@@ -192,9 +208,7 @@
   /* border: 1px solid orange; */
   padding-left: 2px;
 }
-.avatar-container {
-  /* border: 1px solid purple; */
-}
+
 .users-icon {
   margin-left: 2px;
 }
@@ -215,8 +229,7 @@
   display: flex;
 }
 .tooltip,
-.time-tooltip,
-.avatar-hover {
+.time-tooltip {
     position: relative;
     display: inline;
 }
@@ -245,7 +258,11 @@
   position: absolute;
   z-index: 1;
   top:90%;
-  margin-left: -25px;
+  margin: -180px 0 0 -5px;
+}
+.avatar-hover-text {
+  border: 1px solid red;
+  padding-left: 14px;
 }
 .avatar-hover .avatar-hover-text::after {
   content: "";
@@ -255,8 +272,7 @@
  border-left: 5px solid transparent;
  border-right: 5px solid transparent;
  border-bottom: 5px solid green;
- margin-left: -130px;
- margin: -53.5px 0 0 -115px;
+ margin: -53.5px 0 0 -155px;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext {
   min-width: 70px;
@@ -304,14 +320,6 @@
 
 .time-tooltip:hover .time-tooltiptext {
     visibility: visible;
-}
-.profile-hover-img {
-  width: 170px;
-  height: 45px;
-  margin-top: -5px;
-}
-.profile-hover-avatar {
-  border-radius: none;
 }
 
 .status-container {

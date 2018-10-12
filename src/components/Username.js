@@ -18,21 +18,23 @@ const Username = props => {
       return (
 
         <div className="username-container">
-          <div className="avatar-container avatar-hover">
+          <div className="avatar-hover">
 
           <span
             className="avatar-img">
             {props.avatarImg}</span>
-          <span className="avatar-hover-text">
+          <div className="avatar-hover-text">
             <img src={require('../galaxy.jpg')}
                   className="profile-hover-img"
-                  alt="guatemala"/>
+                  alt="galaxy"
+            />
 
 
               <img src={require('../avatar.jpg')}
                     className="profile-hover-avatar"
                     alt="avatar" />
-          </span>
+              <p className="avatar-name-hover">{props.avatarName}</p>
+          </div>
         </div>
         <div className="username-column">
          <h6 className="username">{props.avatarName}</h6>
