@@ -20,10 +20,18 @@ const Username = props => {
         <div className="username-container">
           <div className="avatar-container avatar-hover">
 
-          <span className="avatar-img">{props.avatarImg}</span>
+          <span
+            className="avatar-img">
+            {props.avatarImg}</span>
           <span className="avatar-hover-text">
+            <img src={require('../galaxy.jpg')}
+                  className="profile-hover-img"
+                  alt="guatemala"/>
 
-            testing avatar image
+
+              <img src={require('../avatar.jpg')}
+                    className="profile-hover-avatar"
+                    alt="avatar" />
           </span>
         </div>
         <div className="username-column">

@@ -160,6 +160,14 @@
   width: 30px;
   border-radius: 50%;
 }
+.profile-hover-avatar {
+  height: 40px;
+  width: 40px;
+  margin: -25px 70px 0 -39px;
+  border: 2px solid white;
+  z-index: 3;
+  border-radius: 2px;
+}
 .avatar-img:hover,
 .username:hover {
   cursor: pointer;
@@ -227,7 +235,8 @@
 }
 .avatar-hover .avatar-hover-text {
   visibility: hidden;
-  width: 100px;
+  width: 170px;
+  height: 90px;
   background-color: lightgray;
   color: #fff;
   text-align: center;
@@ -245,10 +254,9 @@
  height: 0;
  border-left: 5px solid transparent;
  border-right: 5px solid transparent;
- border-bottom: 5px solid lightgray;
- margin-left: -55px;
- margin-top: -29px;
-
+ border-bottom: 5px solid green;
+ margin-left: -130px;
+ margin: -53.5px 0 0 -115px;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext {
   min-width: 70px;
@@ -297,6 +305,15 @@
 .time-tooltip:hover .time-tooltiptext {
     visibility: visible;
 }
+.profile-hover-img {
+  width: 170px;
+  height: 45px;
+  margin-top: -5px;
+}
+.profile-hover-avatar {
+  border-radius: none;
+}
+
 .status-container {
   /* border: 1px solid red; */
   width: 95%;
