@@ -135,7 +135,8 @@ handleCommentInput = event => {
       <div className="App">
         <div className="row">
         <Username
-          avatarName={'Natalie Salemme'}/>
+          avatarName={this.state.userName}
+          avatarImg={this.state.avatar}/>
         <ThreeDots />
       </div>
       {/* <input type="file" onChange={this.fileSelectedHandler}/>
