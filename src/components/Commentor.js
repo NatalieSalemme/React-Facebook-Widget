@@ -14,7 +14,8 @@ const Commentor = props => {
             comment={commentor.comment}
             photo={commentor.photo}
             handleRemove={() => props.removeCommentAt(index)}
-            handleReply={props.handleReply}/>
+            handleReply={props.handleReply}
+          />
         )}
       </ul>
 

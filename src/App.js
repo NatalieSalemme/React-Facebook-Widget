@@ -6,6 +6,7 @@ import StatusPhoto from './components/StatusPhoto';
 import LikesBar from './components/LikesBar';
 import LikeCommentShare from './components/LikeCommentShare';
 import CommentSection from './components/CommentSection';
+import axios from 'axios';
 // import Comment from './Comment';
 import './App.css';
 
@@ -13,6 +14,7 @@ class App extends Component {
 constructor(props) {
   super(props);
   this.state = {
+    selectedFile: null,
     commentNumber: 3,
     pendingComment: "",
     showCommentSection: true,
@@ -114,8 +116,21 @@ showCommentSection = e => {
 handleCommentInput = event => {
   this.inputCommentRef.current.focus();
 }
+// fileSelectedHandler = event => {
+//   this.setState({
+//     selectedFile: event.target.files[0]
+//   })
+// }
+// fileUploadHandler = () => {
+//   axios.post('');
+// }
 
   render() {
+    const commentorsList = this.state.commentors.map((commentor) =>
+    <div key={commentor.toString}>
+      <p>{commentor.name}</p>
+    </div>
+  );
     return (
       <div className="App">
         <div className="row">
@@ -123,6 +138,8 @@ handleCommentInput = event => {
           avatarName={'Natalie Salemme'}/>
         <ThreeDots />
       </div>
+      {/* <input type="file" onChange={this.fileSelectedHandler}/>
+      <button onClick={this.fileUploadHandler}>Upload</button> */}
       <StatusText status={'New favorite dessert alert!'}/>
       <StatusPhoto />
       <LikesBar
@@ -131,6 +148,7 @@ handleCommentInput = event => {
         likeList={this.state.likeList}
         addLove={this.addLove}
         addLike={this.addLike}
+        commentorsList={commentorsList}
         showCommentSection={this.showCommentSection}/>
       <LikeCommentShare
         focusOnInput={this.focusOnInput}
@@ -145,6 +163,7 @@ handleCommentInput = event => {
           removeCommentAt={this.removeCommentAt}
           handleReply={this.handleReply}
           inputCommentRef={this.inputCommentRef}
+
         /> : (null)}
 
     </div>

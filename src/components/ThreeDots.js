@@ -33,15 +33,11 @@ class ThreeDots extends React.Component {
               this.dropdownMenu = element;
             }}
             >
-            <div className="
-              dots-dd-container
-              ">
-              {/* // dots-dd-container
-              // dropdown-content */}
+            <div className="dots-dd-container">
               <div className="dots-dd-btn">
                 <a href="https://www.facebook.com/" className="under-horizontal-bar">
-                            <span className="bookmark">{bookmark}</span>
-                               Save post
+              <span className="bookmark">{bookmark}</span>
+                Save post
                </a>
               </div>
               <div className="dots-dd-btn">

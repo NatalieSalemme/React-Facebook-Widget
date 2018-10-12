@@ -23,7 +23,6 @@ export const LikesBar = props => {
   </li>);
   const thumbsUpIcon = <FontAwesomeIcon icon={faThumbsUp} size="xs"/>
   const heartIcon = <FontAwesomeIcon icon={faHeart} size="xs"/>
-
   return (
   <div className="likes-bar">
     <div className="likes-icons">
@@ -59,11 +58,15 @@ export const LikesBar = props => {
         <ul className="likes-name-container">{loveLikeHover}</ul>
       </span>
     </div>
-    <p
-      className="status-comments"
-      onClick={props.showCommentSection}
-      >{props.commentNumber}{props.commentNumber > 1
-      || props.commentNumber === 0 ? ' Comments' : ' Comment'}</p>
+    <div className="tooltip">
+      <p
+        className="status-comments"
+        onClick={props.showCommentSection}
+        >{props.commentNumber}{props.commentNumber > 1
+        || props.commentNumber === 0 ? ' Comments' : ' Comment'}</p>
+    <span className="tooltiptext">{props.commentorsList}</span>
+
+  </div>
   </div>
 );
 }

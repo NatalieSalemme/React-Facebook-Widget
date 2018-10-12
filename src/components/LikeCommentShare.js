@@ -57,8 +57,7 @@ showMenu = e => {
         <span style={{marginRight: '3px'}}>
           {commentIcon}
         </span>
-        <span
-          >Comment</span>
+        <span>Comment</span>
       </p>
       <p onClick={this.showMenu} className="tooltip share-icon-container">
         <span style={{marginRight: '3px', color: '#ed3b68'}}>
