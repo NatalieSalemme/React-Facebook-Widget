@@ -41,8 +41,8 @@ showMenu = e => {
           onClick={this.props.addLike}
           >Like</span>
         <span className="tooltiptext emoji-hover" style={{marginLeft: '30px', height: '20px'}}>
-             <span className="likes-icon">{smThumbsUpIcon}</span>
-             <span className="heart-icon">{heartIcon}</span>
+             <span className="likes-icon" onClick={this.props.addLike}>{smThumbsUpIcon}</span>
+             <span className="heart-icon" onClick={this.props.addLove}>{heartIcon}</span>
              <span className="laugh-icon">{laughIcon}</span>
              <span className="wow-icon">{wowIcon}</span>
              <span className="sad-icon">{sadIcon}</span>

@@ -153,6 +153,7 @@ handleCommentInput = event => {
       <LikeCommentShare
         focusOnInput={this.focusOnInput}
         addLike={this.addLike}
+        addLove={this.addLove}
         handleCommentInput={this.handleCommentInput}
         />
         {this.state.showCommentSection ? <CommentSection

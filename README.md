@@ -2,10 +2,10 @@ What I still need to do:
   -for the input, when the user types more than a certain amount, have the words start on a new line to avoid it being hidden by the emoji's.
   -If I like the status, the number of likes should increase and my name should appear in the likes hover, and I should only be able to do it once
   -If I hover over a user's avatar photo, their cover photo and information should be displayed
--Under the comments hover show the names of people who commented
 -add a timer that counts how many minutes/hours/days/weeks you made the comment or post
 -if you hit reply, your comment gets posted under theirs
 -onclick actions for emojis in comment input
 -make it so you can only love or like a status once
 -add second dropdown to userdropdown more
   -When clicking the friends icon, a dropdown menu should appear with a "more" section
+-if the comments hover contains the name, do not add it
