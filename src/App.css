@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 .username-container {
-  /* border: 1px solid green; */
+  border: 1px solid green;
   display: flex;
   flex-direction: row;
   height: 40px;
@@ -114,7 +114,6 @@
  margin-top: 30px;
  position: absolute;
 }
-
 .share-dd-btn {
   font-weight: 500;
   font-family: "HelveticaNeue", "Helvetica", "Arial";
@@ -161,6 +160,10 @@
   width: 30px;
   border-radius: 50%;
 }
+.avatar-img:hover,
+.username:hover {
+  cursor: pointer;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -204,7 +207,8 @@
   display: flex;
 }
 .tooltip,
-.time-tooltip {
+.time-tooltip,
+.avatar-hover {
     position: relative;
     display: inline;
 }
@@ -221,11 +225,36 @@
     bottom: 150%;
     margin-left: -25px;
 }
+.avatar-hover .avatar-hover-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: lightgray;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top:90%;
+  margin-left: -25px;
+}
+.avatar-hover .avatar-hover-text::after {
+  content: "";
+  position: absolute;
+  width: 0;
+ height: 0;
+ border-left: 5px solid transparent;
+ border-right: 5px solid transparent;
+ border-bottom: 5px solid lightgray;
+ margin-left: -55px;
+ margin-top: -29px;
+
+}
 .likes-icon-tooltip .likes-icon-tooltiptext {
   min-width: 70px;
   width: auto;
 }
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after{
     content: "";
     position: absolute;
     top: 100%;
@@ -241,7 +270,8 @@
 .likes-hover {
   margin-left: -5px;
 }
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext,
+.avatar-hover:hover .avatar-hover-text {
     visibility: visible;
 }
 
