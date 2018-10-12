@@ -1,11 +1,14 @@
 import React from 'react';
 import { UserDropDown } from './UserDropDown';
 import '../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap, faHome } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 const Username = props => {
 
-
+  const graduationIcon = <FontAwesomeIcon icon={faGraduationCap} size="md"/>
+  const homeIcon = <FontAwesomeIcon icon={faHome} size="md"/>
    let todaysDate = new Date();
    let militaryHours = todaysDate.getHours();
    let hours = militaryHours > 12 ? militaryHours - 12 : militaryHours;
@@ -34,6 +37,17 @@ const Username = props => {
                     className="profile-hover-avatar"
                     alt="avatar" />
               <p className="avatar-name-hover">{props.avatarName}</p>
+              <div className="avatar-hover-info">
+                <div className="avatar-info-section">
+                <span>{graduationIcon} Studied Psychology at <a href="#">San Diego State University</a></span>
+                <br />
+                <span>Attended from 2012 to 2016</span>
+                </div>
+                <br />
+                <div className="avatar-info-section">
+                <span>{homeIcon} Lives in <a href="#">San Diego, CA</a></span>
+              </div>
+              </div>
           </div>
         </div>
         <div className="username-column">
@@ -54,30 +68,3 @@ Username.propTypes = {
   avatarName: PropTypes.string.isRequired
 }
 export default Username;
-
-
-//
-// const ThreeDots = props => {
-//   const bookmark = <FontAwesomeIcon icon={faBookmark} />;
-//   return (
-//     <div className="dots-container">
-//       <div className="dropdown">
-//         <button href="https://www.facebook.com/" className="dropbtn">...</button>
-//         <div className="dropdown-content">
-//           <a href="https://www.facebook.com/" className="under-horizontal-bar">
-//             <span className="bookmark">{bookmark}</span>
-//               Save post
-//             </a>
-//           <a href="https://www.facebook.com/">Edit Post</a>
-//           <a href="https://www.facebook.com/">Change Date</a>
-//           <a href="https://www.facebook.com/">Turn off notifications for this post</a>
-//           <a href="https://www.facebook.com/">Show in Tab</a>
-//           <a href="https://www.facebook.com/" className="under-horizontal-bar">Hide from timeline</a>
-//           <a href="https://www.facebook.com/">Delete</a>
-//           <a href="https://www.facebook.com/">Turn Off Translations</a>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-// export default ThreeDots;

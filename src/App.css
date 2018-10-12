@@ -250,7 +250,7 @@
   visibility: hidden;
   width: 170px;
   height: 90px;
-  background-color: lightgray;
+  background-color: white;
   color: #fff;
   text-align: center;
   border-radius: 2px;
@@ -259,6 +259,7 @@
   z-index: 1;
   top:90%;
   margin: -180px 0 0 -5px;
+  border: .4px solid gray;
 }
 .avatar-hover-text {
   /* border: 1px solid red; */
@@ -274,6 +275,26 @@
  border-bottom: 5px solid gray;
  margin: -50px 0 0 -68px;
  z-index: 5;
+}
+.avatar-hover-info {
+  font-size: 6px;
+  color: gray;
+  width: 100px;
+  position: absolute;
+  margin: 15px 0 0 50px;
+  text-align: left;
+  padding-left: 8px;
+}
+.avatar-info-section:hover {
+  background-color: #f2f5f9;
+  cursor: pointer;
+}
+.avatar-info-section a {
+  color: #3B5998;
+  text-decoration: none;
+}
+.avatar-info-section a:hover {
+  text-decoration: underline;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext {
   min-width: 70px;
