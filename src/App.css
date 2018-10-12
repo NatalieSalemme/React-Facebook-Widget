@@ -261,7 +261,7 @@
   margin: -180px 0 0 -5px;
 }
 .avatar-hover-text {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-left: 14px;
 }
 .avatar-hover .avatar-hover-text::after {
@@ -271,8 +271,9 @@
  height: 0;
  border-left: 5px solid transparent;
  border-right: 5px solid transparent;
- border-bottom: 5px solid green;
- margin: -53.5px 0 0 -155px;
+ border-bottom: 5px solid gray;
+ margin: -50px 0 0 -68px;
+ z-index: 5;
 }
 .likes-icon-tooltip .likes-icon-tooltiptext {
   min-width: 70px;
