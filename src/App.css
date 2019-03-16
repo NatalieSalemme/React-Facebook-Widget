@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 .username-container {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   height: 40px;
